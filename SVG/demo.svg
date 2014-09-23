@@ -1,3 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <circle r="50"/>
+  <rect stroke="red" stroke-width="2" width="30" height="20" x="200" y="100" fill="#763442" />
+  <line x1="0" y1="100" x2="300" y2="50" stroke="red" />
+  <line x1="400" y1="0" x2="500" y2="580" stroke-width="30" stroke="papayawhip" stroke-linecap="round" />
+  <line x1="400" y1="0" x2="500" y2="580" stroke-width="10" stroke="rgb(75%, 60%, 90%)" stroke-linecap="round" stroke-dasharray="1 20" />
+  <line x1="200" y1="300" x2="600" y2="20" stroke="#c329aa" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 2 10 2 7 2" />
+  <rect x="200" y="300" width="50" height="90" stroke-width="2" stroke="#f239ee" fill="none" />
+  <rect x="200" y="300" width="50" height="90" stroke-width="2" stroke="orange" fill="none" stroke-dasharray="2 1" />
+  <circle cx="600" cy="20" r="100" fill="yellow" stroke="#ee4efe" stroke-width="5" />
+  <ellipse cx="250" cy="390" rx="120" ry="20" fill="none" stroke="red" stroke-width="48" stroke-dasharray="1 1" />
+
 </svg>
