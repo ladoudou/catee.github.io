@@ -55,5 +55,12 @@
   <use xlink:href="#G" transform="translate(120,0)" fill="#bbb" />
   <use xlink:href="#G" transform="translate(220,0)" fill="#bbb" />
 
+  <!-- github icon -->
+  <image xlink:href="https://github.com/fluidicon.png" x="100" y="800" width="512" height="512" />
+
+  <circle cx="916" cy="1056" r="247" fill="#faf9f9" stroke="#d5d5d5" stroke-width="0.5" />
+  <path fill="#27292c" d="M 847,1262 A 218,218 0 1,1 984,1262 Q 970,1262 970,1254 L 970,1188 Q 970,1166 955,1151 C 1046,1142 1052,1084 1055,1056 C 1055,1025 1055,1014 1032,985 C 1038,968 1042,956 1030,928 C 996,929 991,940 970,950 A 115,56.5 0 0,0 861,950 C 841,940 836,929 802,928 C 790,956 794,968 798,985 C 776,1014 776,1025 776,1056 C 780,1084 786,1142 877,1151 Q 862,1166 862,1188 L 861,1254 Q 861,1262 847,1262" />
+
+
 </svg>
 
