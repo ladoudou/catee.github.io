@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink='http://www.w3.org/1999/xlink' xml:space="preserve" width="200%" height="200%">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200%" height="200%">
   <circle r="50"/>
   <rect stroke="red" stroke-width="2" width="30" height="20" x="200" y="100" fill="#763442" />
   <line x1="0" y1="100" x2="300" y2="50" stroke="red" />
@@ -33,14 +34,26 @@
   <text x="700" y="50" font-size="40" fill="papayawhip" stroke="red" stroke-width="1"><tspan fill="blue">doge doge u r a doge.</tspan> <tspan stroke-dasharray="4 4">why r u so diao？</tspan> <tspan rotate="15">呵</tspan><tspan rotate="30">呵</tspan>，<tspan rotate="45">睡</tspan><tspan rotate="60">觉</tspan>，<tspan rotate="75">去</tspan><tspan rotate="90">洗</tspan><tspan rotate="105">澡</tspan>。</text>
 
   <defs>
-    <path id="demo1" d="M 800,300 C 880,270 950,200 1000,300 C 1050,400 1120,330 1200,300" stroke="black" stroke-width="10" fill="none" />
+    <path id="curve" d="M 800,300 C 880,270 950,200 1000,300 C 1050,400 1120,330 1200,300" stroke="green" stroke-width="20" fill="none" />
   </defs>
   <text id="T" style="font-size:16">
-    <textPath xlink:href="demo1">why r u so diao? doge doge u r a doge. 呵呵睡觉去洗澡。</textPath>
+    <textPath xlink:href="#curve">Hello, here is some text lying along a bezier curve.</textPath>
   </text>
 
+  <circle cx="600" cy="20" r="100" fill="yellow" stroke="#ee4efe" stroke-width="5" opacity="0.5" transform="translate(-600,-20),scale(2)" />
+  <circle cx="600" cy="20" r="100" fill="red" stroke="#ee4efe" stroke-width="5" opacity="0.4" transform="scale(2),translate(-600,-20)" />
 
+  <g fill="black">
+    <g id="G">
+      <rect x="100" y="100" width="100" height="20" fill="inherit" />
+      <rect x="100" y="160" width="100" height="20" fill="inherit" />
+      <ellipse cx="150" cy="140" rx="30" ry="100" fill="#777" />
+      <rect x="100" y="130" width="100" height="20" fill="inherit" />
+    </g>
+  </g>
 
+  <use xlink:href="#G" transform="translate(120,0)" fill="#bbb" />
+  <use xlink:href="#G" transform="translate(220,0)" fill="#bbb" />
 
 </svg>
 
