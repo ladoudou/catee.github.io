@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1074" height="600">
+  <g transform="translate(-100,-800)">
+    <!-- github icon png -->
+    <image xlink:href="https://github.com/fluidicon.png" x="100" y="800" width="512" height="512" />
+    <!-- github icon svg -->
+    <defs>
+      <ellipse id="cat_dots" cx="100" cy="800" fill="#27292c" rx="5" ry="3.5" />
+    </defs>
+    <circle cx="916" cy="1056" r="247" fill="#f4f3f3" stroke="#d5d5d5" stroke-width="0.5" />
+    <path fill="#27292c" d="M 847,1262 A 218,218 0 1,1 984,1262 Q 970,1262 970,1254 L 970,1188 Q 970,1166 955,1151 C 1046,1142 1052,1084 1055,1056 C 1055,1025 1055,1014 1032,985 C 1038,968 1042,956 1030,928 C 996,929 991,940 970,950 A 115,56.5 0 0,0 861,950 C 841,940 836,929 802,928 C 790,956 794,968 798,985 C 776,1014 776,1025 776,1056 C 780,1084 786,1142 877,1151 Q 862,1166 861,1180 C 832,1193 809,1182 798,1162 C 782,1138 763,1137 755,1142 C 751,1145 759,1149 765,1154 C 798,1182 778,1194 818,1211 C 828,1214 841,1214 861,1209 L 861,1254 Q 861,1262 847,1262" />
+    <use xlink:href="#cat_dots" transform="translate(755,391),rotate(-15 100,800)" />
+    <use xlink:href="#cat_dots" transform="translate(738,393)" />
+    <use xlink:href="#cat_dots" transform="translate(721,390),rotate(15 100,800)" />
+    <use xlink:href="#cat_dots" transform="translate(705,381),rotate(40 100,800)" />
+    <use xlink:href="#cat_dots" transform="translate(705,449),scale(0.9),rotate(60 100,800)" />
+    <use xlink:href="#cat_dots" transform="translate(706,517),scale(0.8),rotate(50 100,800)" />
+    <use xlink:href="#cat_dots" transform="translate(717,669),scale(0.6),rotate(30 100,800)" />
+  </g>
+  <g font-size="40" fill="#213434">
+    <text x="200" y="550">.png</text>
+    <text x="774" y="550">.svg</text>
+  </g>
+</svg>
