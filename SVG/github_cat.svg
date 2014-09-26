@@ -16,7 +16,7 @@
     <use xlink:href="#cat_dots" transform="translate(706,517),scale(0.8),rotate(50 100,800)" />
     <use xlink:href="#cat_dots" transform="translate(717,669),scale(0.6),rotate(30 100,800)" />
   </g>
-  <g font-size="40" fill="#213434">
+  <g font-size="40" font-family="ariel" fill="#213434">
     <text x="200" y="550">.png</text>
     <text x="774" y="550">.svg</text>
   </g>
