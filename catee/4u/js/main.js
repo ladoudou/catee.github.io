@@ -184,7 +184,8 @@
   // defs Prairie - end
 
 
-
-var a = new candyCard({});
-a.init();
+window.onload = function (e) {
+  var a = new candyCard({});
+  a.init();
+}
 //a.init();
