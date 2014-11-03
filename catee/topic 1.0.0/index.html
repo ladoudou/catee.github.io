@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>topic 1.0.0</title>
+  <link rel="stylesheet" href="../../css/init.css">
+  <link rel="stylesheet" href="css/topic1.0.0.css">
+</head>
+<body>
+
+  <script type="text/javascript">
+  function ScrollPic(e,t,n,r,i){this.scrollContId=e,this.arrLeftId=t,this.arrRightId=n,this.dotListId=r,this.listType=i,this.dotClassName="dotItem",this.dotOnClassName="dotItemOn",this.dotObjArr=[],this.listEvent="onclick",this.circularly=!0,this.pageWidth=0,this.frameWidth=0,this.speed=10,this.space=10,this.upright=!1,this.pageIndex=0,this.autoPlay=!0,this.autoPlayTime=5,this._autoTimeObj,this._scrollTimeObj,this._state="ready",this.stripDiv=document.createElement("DIV"),this.lDiv01=document.createElement("DIV"),this.lDiv02=document.createElement("DIV")}ScrollPic.prototype={version:"1.44",author:"mengjia",pageLength:0,touch:!0,scrollLeft:0,eof:!1,bof:!0,initialize:function(){var e=this;if(!this.scrollContId)throw new Error("必须指定scrollContId.");this.scDiv=this.$(this.scrollContId);if(!this.scDiv)throw new Error('scrollContId不是正确的对象.(scrollContId = "'+this.scrollContId+'")');this.scDiv.style[this.upright?"height":"width"]=this.frameWidth+"px",this.scDiv.style.overflow="hidden",this.lDiv01.innerHTML=this.scDiv.innerHTML,this.scDiv.innerHTML="",this.scDiv.appendChild(this.stripDiv),this.stripDiv.appendChild(this.lDiv01),this.circularly&&(this.stripDiv.appendChild(this.lDiv02),this.lDiv02.innerHTML=this.lDiv01.innerHTML,this.bof=!1,this.eof=!1),this.stripDiv.style.overflow="hidden",this.stripDiv.style.zoom="1",this.stripDiv.style[this.upright?"height":"width"]="32766px",this.lDiv01.style.overflow="hidden",this.lDiv01.style.zoom="1",this.lDiv02.style.overflow="hidden",this.lDiv02.style.zoom="1",this.upright||(this.lDiv01.style.cssFloat="left",this.lDiv01.style.styleFloat="left"),this.lDiv01.style.zoom="1",this.circularly&&!this.upright&&(this.lDiv02.style.cssFloat="left",this.lDiv02.style.styleFloat="left"),this.lDiv02.style.zoom="1",this.addEvent(this.scDiv,"mouseover",function(){e.stop()}),this.addEvent(this.scDiv,"mouseout",function(){e.play()}),this.arrLeftId&&(this.alObj=this.$(this.arrLeftId),this.alObj&&(this.addEvent(this.alObj,"mousedown",function(t){e.rightMouseDown(),t=t||event,e.preventDefault(t)}),this.addEvent(this.alObj,"mouseup",function(){e.rightEnd()}),this.addEvent(this.alObj,"mouseout",function(){e.rightEnd()}))),this.arrRightId&&(this.arObj=this.$(this.arrRightId),this.arObj&&(this.addEvent(this.arObj,"mousedown",function(t){e.leftMouseDown(),t=t||event,e.preventDefault(t)}),this.addEvent(this.arObj,"mouseup",function(){e.leftEnd()}),this.addEvent(this.arObj,"mouseout",function(){e.leftEnd()})));var t=Math.ceil(this.lDiv01[this.upright?"offsetHeight":"offsetWidth"]/this.frameWidth),n,r;this.pageLength=t;if(this.dotListId){this.dotListObj=this.$(this.dotListId),this.dotListObj.innerHTML="";if(this.dotListObj)for(n=0;n<t;n++)r=document.createElement("span"),this.dotListObj.appendChild(r),this.dotObjArr.push(r),n==this.pageIndex?r.className=this.dotOnClassName:r.className=this.dotClassName,this.listType=="number"?r.innerHTML=n+1:typeof this.listType=="string"?r.innerHTML=this.listType:r.innerHTML="",r.title="第"+(n+1)+"页",r.num=n,r[this.listEvent]=function(){e.pageTo(this.num)}}this.scDiv[this.upright?"scrollTop":"scrollLeft"]=0,this.autoPlay&&this.play(),this._scroll=this.upright?"scrollTop":"scrollLeft",this._sWidth=this.upright?"scrollHeight":"scrollWidth",typeof this.onpagechange=="function"&&this.onpagechange(),this.iPad()},leftMouseDown:function(){if(this._state!="ready")return;var e=this;this._state="floating",clearInterval(this._scrollTimeObj),this._scrollTimeObj=setInterval(function(){e.moveLeft()},this.speed),this.moveLeft()},rightMouseDown:function(){if(this._state!="ready")return;var e=this;this._state="floating",clearInterval(this._scrollTimeObj),this._scrollTimeObj=setInterval(function(){e.moveRight()},this.speed),this.moveRight()},moveLeft:function(){if(this._state!="floating")return;this.circularly?this.scDiv[this._scroll]+this.space>=this.lDiv01[this._sWidth]?this.scDiv[this._scroll]=this.scDiv[this._scroll]+this.space-this.lDiv01[this._sWidth]:this.scDiv[this._scroll]+=this.space:this.scDiv[this._scroll]+this.space>=this.lDiv01[this._sWidth]-this.frameWidth?(this.scDiv[this._scroll]=this.lDiv01[this._sWidth]-this.frameWidth,this.leftEnd()):this.scDiv[this._scroll]+=this.space,this.accountPageIndex()},moveRight:function(){if(this._state!="floating")return;this.circularly?this.scDiv[this._scroll]-this.space<=0?this.scDiv[this._scroll]=this.lDiv01[this._sWidth]+this.scDiv[this._scroll]-this.space:this.scDiv[this._scroll]-=this.space:this.scDiv[this._scroll]-this.space<=0?(this.scDiv[this._scroll]=0,this.rightEnd()):this.scDiv[this._scroll]-=this.space,this.accountPageIndex()},leftEnd:function(){if(this._state!="floating"&&this._state!="touch")return;this._state="stoping",clearInterval(this._scrollTimeObj);var e=this.pageWidth-this.scDiv[this._scroll]%this.pageWidth;this.move(e)},rightEnd:function(){if(this._state!="floating"&&this._state!="touch")return;this._state="stoping",clearInterval(this._scrollTimeObj);var e=-this.scDiv[this._scroll]%this.pageWidth;this.move(e)},move:function(e,t){var n=this,r=e/5,i=!1;t||(r>this.space&&(r=this.space),r<-this.space&&(r=-this.space)),Math.abs(r)<1&&r!=0?r=r>=0?1:-1:r=Math.round(r);var s=this.scDiv[this._scroll]+r;r>0?this.circularly?this.scDiv[this._scroll]+r>=this.lDiv01[this._sWidth]?this.scDiv[this._scroll]=this.scDiv[this._scroll]+r-this.lDiv01[this._sWidth]:this.scDiv[this._scroll]+=r:this.scDiv[this._scroll]+r>=this.lDiv01[this._sWidth]-this.frameWidth?(this.scDiv[this._scroll]=this.lDiv01[this._sWidth]-this.frameWidth,this._state="ready",i=!0):this.scDiv[this._scroll]+=r:this.circularly?this.scDiv[this._scroll]+r<0?this.scDiv[this._scroll]=this.lDiv01[this._sWidth]+this.scDiv[this._scroll]+r:this.scDiv[this._scroll]+=r:this.scDiv[this._scroll]+r<=0?(this.scDiv[this._scroll]=0,this._state="ready",i=!0):this.scDiv[this._scroll]+=r;if(i){this.accountPageIndex();return}e-=r;if(Math.abs(e)==0){this._state="ready",this.autoPlay&&this.play(),this.accountPageIndex();return}clearTimeout(this._scrollTimeObj),this._scrollTimeObj=setTimeout(function(){n.move(e,t)},this.speed)},pre:function(){if(this._state!="ready")return;this._state="stoping",this.move(-this.pageWidth)},next:function(e){if(this._state!="ready")return;this._state="stoping",this.circularly?this.move(this.pageWidth):this.scDiv[this._scroll]>=this.lDiv01[this._sWidth]-this.frameWidth?(this._state="ready",e&&this.pageTo(0)):this.move(this.pageWidth)},play:function(){var e=this;if(!this.autoPlay)return;clearInterval(this._autoTimeObj),this._autoTimeObj=setInterval(function(){e.next(!0)},this.autoPlayTime*1e3)},stop:function(){clearInterval(this._autoTimeObj)},pageTo:function(e){if(this.pageIndex==e)return;e<0&&(e=this.pageLength-1),clearTimeout(this._scrollTimeObj),clearInterval(this._scrollTimeObj),this._state="stoping";var t=e*this.frameWidth-this.scDiv[this._scroll];this.move(t,!0)},accountPageIndex:function(){var e=Math.round(this.scDiv[this._scroll]/this.frameWidth);e>=this.pageLength&&(e=0),this.scrollLeft=this.scDiv[this._scroll];var t=this.lDiv01[this._sWidth]-this.frameWidth;this.circularly||(this.eof=this.scrollLeft>=t,this.bof=this.scrollLeft<=0),typeof this.onmove=="function"&&this.onmove();if(e==this.pageIndex)return;this.pageIndex=e,this.pageIndex>Math.floor(this.lDiv01[this.upright?"offsetHeight":"offsetWidth"]/this.frameWidth)&&(this.pageIndex=0);var n;for(n=0;n<this.dotObjArr.length;n++)n==this.pageIndex?this.dotObjArr[n].className=this.dotOnClassName:this.dotObjArr[n].className=this.dotClassName;typeof this.onpagechange=="function"&&this.onpagechange()},iPadX:0,iPadLastX:0,iPadStatus:"ok",iPad:function(){if(typeof window.ontouchstart=="undefined")return;if(!this.touch)return;var e=this;this.addEvent(this.scDiv,"touchstart",function(t){e._touchstart(t)}),this.addEvent(this.scDiv,"touchmove",function(t){e._touchmove(t)}),this.addEvent(this.scDiv,"touchend",function(t){e._touchend(t)})},_touchstart:function(e){this.stop(),this.iPadX=e.touches[0].pageX,this.iPadScrollX=window.pageXOffset,this.iPadScrollY=window.pageYOffset,this.scDivScrollLeft=this.scDiv[this._scroll]},_touchmove:function(e){e.touches.length>1&&this._touchend(),this.iPadLastX=e.touches[0].pageX;var t=this.iPadX-this.iPadLastX;if(this.iPadStatus=="ok"){if(!(this.iPadScrollY==window.pageYOffset&&this.iPadScrollX==window.pageXOffset&&Math.abs(t)>20))return;this.iPadStatus="touch"}this._state="touch";var n=this.scDivScrollLeft+t;if(n>=this.lDiv01[this._sWidth]){if(!this.circularly)return;n-=this.lDiv01[this._sWidth]}if(n<0){if(!this.circularly)return;n+=this.lDiv01[this._sWidth]}this.scDiv[this._scroll]=n,e.preventDefault()},_touchend:function(e){if(this.iPadStatus!="touch")return;this.iPadStatus="ok";var t=this.iPadX-this.iPadLastX;t<0?this.rightEnd():this.leftEnd(),this.play()},_overTouch:function(){this.iPadStatus="ok"},$:function(objName){return document.getElementById?eval('document.getElementById("'+objName+'")'):eval("document.all."+objName)},isIE:navigator.appVersion.indexOf("MSIE")!=-1?!0:!1,addEvent:function(e,t,n){e.attachEvent?e.attachEvent("on"+t,n):e.addEventListener(t,n,!1)},delEvent:function(e,t,n){e.detachEvent?e.detachEvent("on"+t,n):e.removeEventListener(t,n,!1)},preventDefault:function(e){e.preventDefault?e.preventDefault():e.returnValue=!1}}
+  </script>
+
+  <div class="catee-header-wrap">
+    <div class="catee-header clearfix">
+      <div class="catee-logo"><a href="#url" target="_blank"></a></div>
+      <div class="catee-links">
+        <a href="#url" target="_blank">首页啥的</a> |
+        <a href="#url" target="_blank">首页啥的</a> |
+        <a href="#url" target="_blank">首页啥的</a> 
+      </div>
+    </div>
+  </div>
+
+  <div class="catee-banner"><img src="http://s5.sinaimg.cn/mw690/001YRz1jzy6Mqogy35yd4&690" alt=""></div>
+
+  <div class="catee-focus-pic">
+    <div id="catee_focus_pic" class="clearfix">
+      <div class="catee-fp-item">
+        <div class="catee-fpi-img"><a href="" herf="#url" target="_blank"><img src="img/focus_demo.jpg" alt=""></a></div>
+        <div class="catee-fpi-bg"></div>
+        <div class="catee-fpi-txt">
+          <h2 class="catee-fpi-title"><a href="">抄的</a></h2>
+          <p>定理：喝醉的酒鬼总能找到回家的路，喝醉的小鸟则可能永远也回不了家。</p>
+          <p>看来，在香椿的身上吃出花朵的感觉也不是奇怪的事情。</p>
+          <p>-- By Catee</p>
+        </div>
+      </div>
+      <div class="catee-fp-item">
+        <div class="catee-fpi-img"><a href="" herf="#url" target="_blank"><img src="img/focus_demo.jpg" alt=""></a></div>
+        <div class="catee-fpi-bg"></div>
+        <div class="catee-fpi-txt">
+          <h2 class="catee-fpi-title"><a href="">还是抄的</a></h2>
+          <p>我没有亲临现场，也无法去探究什么是真相，但是，我真的被他们两个人身上所折射出来的人性光芒所折服。</p>
+          <p>人在危难的时候，愿意把生的希望留给别人，这就是我们现在最缺少的也是人性中最为动人的闪光。</p>
+          <p>-- By Catee</p>
+        </div>
+      </div>
+      <div class="catee-fp-item">
+        <div class="catee-fpi-img"><a href="" herf="#url" target="_blank"><img src="img/focus_demo.jpg" alt=""></a></div>
+        <div class="catee-fpi-bg"></div>
+        <div class="catee-fpi-txt">
+          <h2 class="catee-fpi-title"><a href="">嗯，肯定抄的</a></h2>
+          <p>夕阳里的倩影</p>
+          <p>是画师的点笔</p>
+          <p>还是画笔的痴迷</p>
+          <p>让我目不转睛沉醉</p>
+          <p>同在风景里</p>
+          <p>-- By Catee</p>
+        </div>
+      </div>
+    </div>
+    <div id="catee_fp_dots"></div>
+    <script type="text/javascript">
+    (function () {
+      var scrollPics = new ScrollPic();
+        scrollPics.scrollContId = 'catee_focus_pic'; // 容器 id
+        scrollPics.pageWidth = 1000; // 显示宽度
+        scrollPics.frameWidth = 1000; // 每桢宽度
+        scrollPics.dotListId = 'catee_fp_dots'; // dotid
+        scrollPics.upright = false; // 垂直滚动
+        scrollPics.circularly = true; // 是否循环
+        scrollPics.autoPlay = true; // 是否自动播放
+        scrollPics.listEvent = 'onmouseover'; // dot 触发事件
+        scrollPics.arrLeftId = ''; // previd
+        scrollPics.arrRightId = ''; // nextid
+        scrollPics.speed = 10; //移动速度(单位毫秒，越小越快)
+        scrollPics.space = 60; //每次移动像素(单位px，越大越快)
+        scrollPics.autoPlay = true; //自动播放
+        scrollPics.autoPlayTime = 3; //自动播放间隔时间(秒)
+        scrollPics.initialize();
+    })();
+    </script>
+  </div>
+  
+  <div class="catee-txt-img">
+    <div class="catee-ti-title">
+      <div class="catee-ti-titleline"></div>
+      <h2><a href="#url" target="_blank">喝醉的小鸟</a></h2>
+    </div>
+    <div class="catee-ti-img catee-fl catee-hi">
+      <a href="#url" target="_blank">
+        <img src="http://f.hiphotos.baidu.com/zhidao/pic/item/4610b912c8fcc3ce36eb29a89245d688d43f2006.jpg" alt="">
+        <span>说好的喝醉的小鸟呢</span>
+      </a>
+    </div>
+    <div class="catee-ti-txt">
+      <p>定理：喝醉的酒鬼总能找到回家的路，喝醉的小鸟则可能永远也回不了家。</p>
+      <p>假设有一条水平直线，从某个位置出发，每次有 50% 的概率向左走1米，有50%的概率向右走1米。按照这种方式无限地随机游走下去，最终能回到出发点的概率是多少？答案是100% 。在一维随机游走过程中，只要时间足够长，我们最终总能回到出发点。</p>
+      <p>现在考虑一个喝醉的酒鬼，他在街道上随机游走。假设整个城市的街道呈网格状分布，酒鬼每走到一个十字路口，都会概率均等地选择一条路（包括自己来时的那条路）继续走下去。那么他最终能够回到出发点的概率是多少呢？答案也还是 100% 。刚开始，这个醉鬼可能会越走越远，但最后他总能找到回家路。</p>
+      <p>不过，醉酒的小鸟就没有这么幸运了。假如一只小鸟飞行时，每次都从上、下、左、右、前、后中概率均等地选择一个方向，那么它很有可能永远也回不到 出发点了。事实上，在三维网格中随机游走，最终能回到出发点的概率只有大约 34% 。</p>
+      <p>这个定理是著名数学家波利亚（George Pólya）在 1921 年证明的。随着维度的增加，回到出发点的概率将变得越来越低。在四维网格中随机游走，最终能回到出发点的概率是 19.3% ，而在八维空间中，这个概率只有 7.3% 。</p>
+    </div>
+  </div>
+
+  <div class="catee-txt-img">
+    <div class="catee-ti-title">
+      <div class="catee-ti-titleline"></div>
+      <h2><a href="#url" target="_blank">喝醉的小鸟</a></h2>
+    </div>
+    <div class="catee-ti-img catee-fr catee-vi">
+      <a href="#url" target="_blank">
+        <img src="http://cdn.duitang.com/uploads/item/201208/03/20120803171527_Vja3U.jpeg" alt="">
+        <span>说好的喝醉的小鸟呢</span>
+      </a>
+    </div>
+    <div class="catee-ti-txt">
+      <p>香椿的那股“春天味儿”来自于其中特殊的挥发物，包括了萜类、倍半萜类等物质，所以是一种混合了石竹烯、大牻牛儿苗烯、金合欢烯、丁香烯、樟脑等气味儿成分的杂烩。特别是其中的石竹烯拥有一种柑橘、樟脑和丁香的混合香气。看来，在香椿的身上吃出花朵的感觉也不是奇怪的事情。</p>
+      <p>除了特殊的香味儿，香椿有种特殊的鲜味，不用加味精就已经是极鲜的存在了，那是因为香椿中含有不少谷氨酸呢。谷氨酸可以占香椿干物质的2.6%，再搭配上鸡蛋中的核苷酸，两者混合产生的味觉增益效应，就让我们感受到那种难以言表的春天味道了。</p>
+      <p>不知从什么时候开始，硝酸盐成了人类的死敌，先是有报道说镇江肴肉中的硝酸盐会危害人身体；再是加工食品中的硝酸盐被爆屡屡超标；再到后来，连菜叶子中的硝酸盐都成了危险物。硝酸盐含量超高的香椿芽自然不能免俗，于是就有了水汆浸泡处理这个特殊方法。</p>
+      <p>要说清有毒没毒，我们得先理清楚硝酸、亚硝酸和铵这含氮化合物一家子的关系。硝酸盐和铵类盐本身毒性很低（硝酸盐的急性半数致死剂量为3236毫克/千克，而氯化钠为3000毫克/千克），所以很少有人因为接触硝酸盐而中毒。至于硝酸盐的小兄弟亚硝酸盐却不是善茬，它们会霸占人体中的血红蛋白，让人缺氧而死。更让人担心的是，它们会跟胺类物质结合生成亚硝胺，而这可是能致癌的危险物品。</p>
+      <p>问题是，硝酸盐会在人体内变成亚硝酸盐。一般来说，被人吃下的硝酸盐会通过消化道进入血液，这些硝酸盐会被送到唾液腺中。随着唾液分泌，硝酸盐又进入了口腔，在这里有众多的细菌把硝酸盐还原成了亚硝酸盐，麻烦原来是人体自找的！大多数硝酸盐进入消化道又开始新一轮循环，还有一部分被排出了体外。这个时候，不安分的亚硝酸盐就琢磨着捣乱了，如果胃部的酸性出了问题，它们就很容易与胺类物质结合，最终变身成为强力致癌物质。这才是硝酸盐和亚硝酸盐最可怕最危险的地方。</p>
+      <p>话说回来，微量的亚硝酸盐对于维持口腔微生物环境却是必须的。正是由于亚硝酸盐的存在，那些有害的厌氧菌才不会兴风作浪。与此同时，很多亚硝酸盐会被进一步还原为一氧化氮，而这种物质对于维持人体正常的血压具有重要作用。另外，亚硝酸盐也不会在人体内积累。</p>
+    </div>
+  </div>
+
+  <div class="catee-ti-list clearfix">
+    <div class="catee-ti-title">
+      <div class="catee-ti-titleline"></div>
+      <h2><a href="#url" target="_blank">放几个链接什么的</a></h2>
+    </div>
+    <div class="catee-til-blk clearfix">
+      <div class="catee-tilb-img catee-fl"><a href="_blank" target="_blank"><img src="http://s1.houdao.com/11884/13/11/21/373_32105357_4153962d1afa2c9.jpg" alt=""></a></div>
+      <div class="catee-tilb-list">
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+      </div>
+    </div>
+    <div class="catee-til-blk clearfix">
+      <div class="catee-tilb-img catee-fl"><a href="_blank" target="_blank"><img src="http://s1.houdao.com/11884/13/11/21/373_32105357_4153962d1afa2c9.jpg" alt=""></a></div>
+      <div class="catee-tilb-list">
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+        <p><a href="#url" target="_blank">哗嚓，美女啊。。。</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="catee-sina-footer">
+    <p><a target="_blank" href="http://comment4.news.sina.com.cn/comment/skin/feedback.html">新浪女性意见反馈留言板</a>&#12288;电话：4006900000&#12288;&#12288;欢迎批评指正</p>
+    <p><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://emarketing.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="https://login.sina.com.cn/signup/signup.php">通行证注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a></p>
+    <p>Copyright <span style="font-family:Arial;">&copy; </span> 1996-2014 SINA Corporation, All Rights Reserved</p>
+    <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a></p>
+  </div>
+
+  <script type="text/javascript" src="../../js/lib/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="../../js/lib/underscore.js"></script>
+</body>
+</html>

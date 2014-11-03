@@ -14,7 +14,7 @@ table{border-collapse:collapse;}
 body{font: 15px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","Arial","SimSun","\5B8B\4F53"; color: #666;}
 a{color:#333; text-decoration:none;}
 a:visited{color:#333;}
-a:hover{color:'papayawhip';}
+a:hover{color:papayawhip;}
 a:focus{outline:none;}
 .clearfix{zoom:1;}
 .clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden;}

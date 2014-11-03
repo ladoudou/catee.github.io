@@ -36,6 +36,7 @@
         cardListEle = self.cardListEle;
       _.map(cardListEle, function (ele, i) {
         ele.setAttribute('candyCard-index', i);
+        ele.style.zIndex = 10 + i * 2;
         $(ele).addClass('catee-animate-init');
       })
     },
@@ -46,11 +47,11 @@
         current = self.current,
         cardListEle = self.cardListEle;
       _.map(cardListEle, function (ele, i) {
-        i && $(ele).attr('style', '-webkit-transition-delay:' + ((length - i) * 0.1) + 's').addClass('catee-init');
+        i && $(ele).css('-webkit-transition-delay', (((length - i) * 0.1) + 's')).addClass('catee-init');
         i && (i < 6) && $(ele).removeClass('catee-init').addClass(['catee-showout-', i].join(''));
       })
       setTimeout(function () {
-        cardListEle.attr('style', '-webkit-transition-delay:0.1s');
+        cardListEle.css('-webkit-transition-delay', '0.1s');
       }, 100)
     },
 
@@ -62,25 +63,27 @@
       switch (type) {
         case 1:
           current = ++ self.current;
+          $(cardListEle[current - 1]).removeClass('catee-fadein').addClass('catee-fadeout').css('opacity', '0');
           $(cardListEle[current]).addClass('catee-animate-active').removeClass('catee-showout-1 catee-init');
           for (var i = 1, len = win.Math.min(6, length - 1 - current); i < len; i ++) {
-            $(cardListEle[current + i]).attr('style', '-webkit-transition-delay:' + (i * 0.1) + 's').addClass(['catee-showout-', i].join('')).removeClass([['catee-showout-', i + 1].join(''), ' catee-init'].join(''));
+            $(cardListEle[current + i]).css('-webkit-transition-delay', ((i * 0.1) + 's')).addClass(['catee-showout-', i].join('')).removeClass([['catee-showout-', i + 1].join(''), ' catee-init'].join(''));
           };
           setTimeout(function () {
-            cardListEle.attr('style', '-webkit-transition-delay:0.1s');
+            cardListEle.css('-webkit-transition-delay', '0.1s');
           }, 100);
           break;
         case 0:
           current = self.current;
-          $(cardListEle[current]).addClass('catee-showout-0').removeClass('catee-animate-active');
+          $(cardListEle[current]).addClass('catee-showout-0 catee-init').removeClass('catee-animate-active');
+          $(cardListEle[current - 1]).removeClass('catee-fadeout').addClass('catee-fadein').css('opacity', '1');
           setTimeout(function () {
             for (var i = 0, len = win.Math.min(6, length - 1 - current); i < len; i ++) {
-              $(cardListEle[current + i]).attr('style', '-webkit-transition-delay:' + ((6 - i) * 0.1) + 's').addClass([['catee-showout-', i + 1].join(''), ' catee-init'].join('')).removeClass(['catee-showout-', i].join(''));
+              $(cardListEle[current + i]).css('-webkit-transition-delay', (((6 - i) * 0.1) + 's')).addClass([['catee-showout-', i + 1].join(''), ' catee-init'].join('')).removeClass(['catee-showout-', i].join(''));
             };
-            setTimeout(function () {
-              cardListEle.attr('style', '-webkit-transition-delay:0.1s');
-            }, 100);
           }, 900);
+          setTimeout(function () {
+            cardListEle.css('-webkit-transition-delay', '0.1s');
+          }, 100);
           self.current --;
           break;
         default:
@@ -172,8 +175,7 @@
         } while (-- length > 0)
         return result;
     }
-
-
+    
   }
   win.candyCard = candyCard;
 })(window, document, $, _)
@@ -189,3 +191,13 @@ window.onload = function (e) {
   a.init();
 }
 //a.init();
+
+
+
+
+
+
+
+
+
+

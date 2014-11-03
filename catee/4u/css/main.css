@@ -12,7 +12,7 @@
   -webkit-perspective: 1000;
 }
 
-/* animate */
+/* card animate */
 .catee-animate-init{
   transition: -webkit-transform .8s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
@@ -50,11 +50,50 @@
   -webkit-transform: translate3d(0, 98%, 0);
 }
 
+.catee-fadeout{
+  -webkit-animation: 'catee_fadeout' .8s ease-in-out .4s 1 normal;
+}
+@-webkit-keyframes 'catee_fadeout'{
+  from {
+    opacity: 1
+  } to {
+    opacity: 0
+  }
+}
+.catee-fadein{
+  -webkit-animation: 'catee_fadein' .8s ease-in-out 0s 1 normal;
+}
+@-webkit-keyframes 'catee_fadein'{
+  from {
+    opacity: 0
+  } to {
+    opacity: 1
+  }
+}
+
 .catee-c-aliceblue{
   background-color: rgba(240, 248, 255, 0.8);
 }
 .catee-c-olivedrab{
   background-color: rgba(107, 142, 35, 0.8);
+}
+.catee-c-pink{
+  background-color: rgba(255, 150, 150, 0.8);
+}
+.catee-c-aquamarine{
+  background-color: rgba(127, 255, 212, 0.8);
+}
+.catee-c-wheat{
+  background-color: rgba(245, 222, 179, 0.8);
+}
+.catee-c-indigo{
+  background-color: rgba(75, 0, 130, 0.8);
+}
+.catee-c-deepskyblue{
+  background-color: rgba(0, 191, 255, 0.8);
+}
+.catee-c-lightseagreen{
+  background-color: rgba(32, 178, 170, 0.8);
 }
 
 /* headerline */ 
@@ -68,6 +107,16 @@
   box-shadow: 0 0 6px 2px #999;
   opacity: 0.8;
   z-index: 9999;
+}
+
+/* candyCard_bg */
+#candy_card_bg{
+  position: fixed;
+  top: 3px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
 }
 
 /* drawer */
@@ -138,6 +187,7 @@
   height: 300px;
   opacity: 0.2;
   -webkit-transition: opacity .2s ease-in-out;
+  z-index: 9999998;
 }
 #catee_controller:hover{
   opacity: 0.9;
@@ -165,6 +215,82 @@
   );
 }
 
+
+/* content - preview */
+.catee-preview{
+  width: 1000px;
+  height: auto;
+  margin: 10px;
+  border: solid 1px rgba(222, 222, 222, 0.8);
+  border-radius: 3px;
+  box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.29);
+  background-color: rgba(245, 245, 245, 0.95);
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.8);
+}
+
+/* input */
+.catee-input{
+  position: relative;
+  width: 400px;
+  height: 20px;
+  line-height: 20px;
+  border: solid 1px rgba(29, 29, 29, 0.29);
+  border-radius: 3px;
+  box-shadow: inset 2px 2px 6px 0 rgba(29, 29, 29, 0.29);
+  padding: 4px 10px;
+}
+.catee-input input{
+  display: inline-block;
+  width: 370px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(245, 245, 245, 0.95);
+  color: goldenrod;
+}
+.catee-input-attachment{
+  display: inline-block;
+  font-size: 12px;
+  margin-left: -90px;
+  color: lightgray;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.catee-input-attachment:after{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  content: '';
+  top: 7px;
+  right: 12px;
+  border-radius: 50%;
+  -webkit-transition: background-color .2s ease-in-out;
+}
+.catee-input-attachment-error:after{
+  background-color: firebrick;
+}
+.catee-input-attachment-correct:after{
+  background-color: forestgreen;
+}
+
+/* banner */
+.catee-banner{
+  width: 1000px;
+  position: relative;
+}
+.catee-banner img{
+  width: 1000px;
+  max-height: 400px;
+}
+.catee-banner-controller{
+  display: inline-block;
+  margin: -20px 10px;
+  padding: 20px;
+  border: solid 1px rgba(222, 222, 222, 0.8);
+  border-radius: 3px;
+  box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.29);
+  background-color: rgba(245, 245, 245, 0.95);
+}
 
 /*
 /* common 

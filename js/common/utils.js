@@ -15,6 +15,13 @@
         e.returnValue = null;
       }
     },
+    stopPropagation: function (e) {
+      if (e.stopPropagation) {
+        e.stopPropagation();
+      } else {
+        e.cancelBubble = true;
+      }
+    },
     hasClass: function(elem, cls){
       var reg = new RegExp('(^|\\s)' + cls + '($|\\s)');
       return reg.test(elem.className);

@@ -4,28 +4,40 @@
   <meta charset="UTF-8">
   <title>I`m a Catee~!</title>
   <link rel="shortcut icon" href="../../img/title.png" />
-  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/init.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
 
   <header id="catee_header" class="catee-header"></header>
 
+  <embed id="candy_card_bg" src="svg/candyCard_bg.svg" width="300" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
   <div id="catee_content">
-    <div class="catee-candyCard catee-c-olivedrab"></div>
+    <div class="catee-candyCard catee-c-olivedrab" id="catee_banner">
+      <div class="catee-preview">
+        <div class="catee-banner"><img src="http://catee.github.io/img/title.png" alt=""></div>
+      </div>
+      <div class="catee-banner-controller">
+        <div class="catee-input">
+          <input type="text" id="catee_banner_input_1" value="">
+          <span class="catee-input-attachment">填入图片地址 ...</span>
+        </div>
+      </div>
+    </div>
     <div class="catee-candyCard catee-c-aliceblue"></div>
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
+    <div class="catee-candyCard catee-c-aquamarine"></div>
+    <div class="catee-candyCard catee-c-wheat"></div>
 
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
+    <div class="catee-candyCard catee-c-lightseagreen"></div>
+    <div class="catee-candyCard catee-c-indigo"></div>
+    <div class="catee-candyCard catee-c-olivedrab"></div>
+    <div class="catee-candyCard catee-c-deepskyblue"></div>
 
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
-    <div class="catee-candyCard"></div>
+    <div class="catee-candyCard catee-c-pink"></div>
+    <div class="catee-candyCard catee-c-wheat"></div>
+    <div class="catee-candyCard catee-c-aquamarine"></div>
+    <div class="catee-candyCard catee-c-deepskyblue"></div>
   </div>
   <div id="catee_drawer">
     <div class="catee-drawer-handle"></div>
@@ -37,6 +49,7 @@
 
   <script type="text/javascript" src="../../js/lib/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="../../js/lib/underscore.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/candyCard.js"></script>
+  <script type="text/javascript" src="js/banner.js"></script>
 </body>
 </html>

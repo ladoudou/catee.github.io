@@ -1,0 +1,134 @@
+.catee-editor{
+  min-width: 600px;
+  min-height: 400px;
+  margin: 0 auto;
+  border: solid 1px #f2f2f2;
+  box-shadow: 0 0 4px 0 rgba(29, 29, 29, 0.29);
+  background-color: #fdfdfd;
+}
+
+.catee-editor-header{
+  position: relative;
+  background-color: #ddd;
+}
+
+.catee-editor-btns{
+  float: left;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #ddd;
+  -webkit-text-shadow: 0 0 0 rgba(255, 255, 255, 1);
+  -moz-text-shadow: 0 0 0 rgba(255, 255, 255, 1);
+  -ms-text-shadow: 0 0 0 rgba(255, 255, 255, 1);
+  -o-text-shadow: 0 0 0 rgba(255, 255, 255, 1);
+  text-shadow: 0 0 0 rgba(255, 255, 255, 1);
+  -webkit-transition: background-color .2s ease-in-out, -webkit-text-shadow .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out, -moz-text-shadow .2s ease-in-out;
+  -ms-transition: background-color .2s ease-in-out, -ms-text-shadow .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out, -o-text-shadow .2s ease-in-out;
+  transition: background-color .2s ease-in-out, text-shadow .2s ease-in-out;
+}
+.catee-editor-btns:hover{
+  background-color: #aaa;
+  -webkit-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  -moz-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  -ms-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  -o-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+}
+.catee-editor-btns-selected{
+  background-color: #aaa;
+  -webkit-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  -moz-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  -ms-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  -o-text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+}
+.catee-editor-bold{
+  font-weight: bold;
+}
+.catee-editor-italic{
+  font-style: italic;
+}
+.catee-editor-underline{
+  text-decoration: underline;
+}
+.catee-editor-size12{
+  font-size: 12px;
+  line-height: 46px !important;
+}
+.catee-editor-size14{
+  font-size: 14px;
+  line-height: 46px !important;
+}
+.catee-editor-size15{
+  font-size: 15px;
+  line-height: 45px !important;
+}
+.catee-editor-size16{
+  font-size: 16px;
+  line-height: 45px !important;
+}
+.catee-editor-size18{
+  font-size: 18px;
+  line-height: 45px !important;
+}
+.catee-editor-size20{
+  font-size: 20px;
+  line-height: 44px !important;
+}
+.catee-editor-red{
+  color: red;
+}
+.catee-editor-333{
+  color: #333;
+}
+.catee-editor-666{
+  color: #666;
+}
+.catee-editor-black{
+  color: black;
+}
+.catee-editor-gray{
+  color: gray;
+}
+.catee-editor-blue{
+  color: blue;
+}
+
+
+
+.catee-editor-body{
+  line-height: 1.8em;
+  min-height: 330px;
+  max-height: 800px;
+  margin: 10px auto 0;
+  padding: 0px 8px;
+  border-bottom: dashed 1px #f2f2f2;
+  background-color: rgba(255, 239, 213, 0.29);
+  resize: vertical;
+  overflow: auto;
+  outline: none;
+}
+
+.catee-eidtor-footnote{
+  float: right;
+  margin: 10px 20px 10px auto;
+  color: #ccc;
+}
+.catee-eidtor-footnote a{
+  color: #ccc;
+  -webkit-transition: color .2s ease-in-out;
+  -moz-transition: color .2s ease-in-out;
+  -ms-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+.catee-eidtor-footnote a:hover{
+  color: goldenrod;
+}
