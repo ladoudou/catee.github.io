@@ -21,10 +21,10 @@ a:focus{outline:none;}
 .catee-ti-img a:after{ background-color: #fff; position: absolute; left: 0; content: ''; }
 .catee-ti-img a span{ text-align: center; display: block; background-color: #fff; }
 .catee-tilb-img a img, .catee-ti-img a img{
-  -webkit-transition: transform .3s ease-in-out;
-  -moz-transition: transform .3s ease-in-out;
-  -ms-transition: transform .3s ease-in-out;
-  -o-transition: transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -moz-transition: -moz-transform .3s ease-in-out;
+  -ms-transition: -ms-transform .3s ease-in-out;
+  -o-transition: -o-transform .3s ease-in-out;
   transition: transform .3s ease-in-out; 
 }
 .catee-tilb-img a img:hover, .catee-ti-img a:hover img{
