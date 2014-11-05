@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* 初始化 */
+body{
+  color: #fff;
+}
+
+/* sth */
+.fixed{
+  position: fixed;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+
+/* 背景 */
+.background{
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: -webkit-linear-gradient(
+    -41deg, 
+    #42999d 0%,
+    #41748f 34%,
+    #427a91 60%,
+    #48768a 80%,
+    #41718b 95%,
+    #427a91 100%
+    );
+  background-image: linear-gradient(
+    -41deg, 
+    #42999d 0%,
+    #41748f 34%,
+    #427a91 60%,
+    #48768a 80%,
+    #41718b 95%,
+    #427a91 100%
+    );
+}
+
+/* timing egg */
+.timing-egg{
+  z-index: 99;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(62, 179, 157, 1);
+  border-radius: 50%;
+  line-height: 32px;
+  font-size: 10px;
+  text-align: center;
+  top: 15px;
+  left: 15px;
+}
+.timing-egg-fixed{
+  position: fixed !important;
+  top: 0;
+  left: 15px !important;
+}
+
+/* 列表 */
+.cute-list{
+  margin-top: 15px;
+}
+.cute-item{
+  margin: 0 15px 0 30px;
+  border-left: solid 2px rgba(62, 179, 157, 1);
+  height: 150px;
+}
+.ci-sweet{
+  overflow: hidden;
+  padding: 32px 0 0 10px;
+  position: relative;
+}
+.ci-sweet:after{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 2px;
+  overflow: hidden;
+  background-color: rgba(62, 179, 157, 1);
+  top: 67px;
+  left: 0;
+}
+.candy-name{
+  font-size: 14px;
+  line-height: 20px;
+}
+.dead-timing{
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(62, 179, 157, 1);
+  padding: 0 9px;
+  line-height: 35px;
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px rgba(29, 29, 29 ,0.29);
+}
+.candy-info{
+  font-size: 11px;
+  line-height: 18px;
+}
+.ci-candy{
+  position: relative;
+}
+.candy-portrait{
+  width: 116px;
+  height: 116px;
+  border: solid 4px rgba(62, 179, 157, 1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.candy-GoB{
+  width: 20px;
+  height: 18px;
+  background: url(../img/heart.png) no-repeat 0 0;
+  background-size: 40px 18px;
+  position: absolute;
+  right: 21px;
+  bottom: 2px;
+}
+.girl{
+  background-position: 0 0;
+}
+.boy{
+  background-position: -20px 0;
+}
+
+/* deadline */
+.deadline{
+  bottom: 10px;
+  right: 15px;
+}
+.deadline-title, .deadline-rest{
+  display: inline-block;
+  vertical-align: bottom;
+  color: rgba(62, 179, 157, 1);
+  background-color: rgba(13, 15, 5, 0.7);
+}
+.deadline-title{
+  width: 20px;
+  height: 52px;
+  overflow: visible;
+  font-size: 52px;
+  line-height: 58px;
+  text-indent: -0.2em;
+  position: relative;
+}
+.deadline-title:before, .deadline-title:after{
+  position: absolute;
+  left: -26px;
+  content: '';
+  width: 26px;
+  height: 25px;
+  background-color: rgba(13, 15, 5, 0.7);
+  z-index: 9;
+}
+.deadline-title:before{
+  top: 0;
+}
+.deadline-title:after{
+  bottom: 0;
+}
+.deadline-title b{
+  font-weight: normal;
+  position: relative;
+  z-index: 19;
+}
+.deadline-rest{
+  width: 100px;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 25px;
+  font-size: 21px;
+}
+
+
+

@@ -1,0 +1,165 @@
+@charset "utf-8";
+@font-face { 
+  font-family: 'tt'; 
+  src: url('../font/tt.woff') format('woff'); /* chrome、firefox */ 
+
+} 
+/* 初始化 */
+body{
+  color: #fff;
+}
+
+/* sth */
+.fixed{
+  position: fixed;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.oh{
+  overflow: hidden;
+}
+
+/* 背景 */
+.background{
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: -webkit-linear-gradient(
+    -41deg, 
+    #42999d 0%,
+    #41748f 34%,
+    #427a91 60%,
+    #48768a 80%,
+    #41718b 95%,
+    #427a91 100%
+    );
+  background-image: linear-gradient(
+    -41deg, 
+    #42999d 0%,
+    #41748f 34%,
+    #427a91 60%,
+    #48768a 80%,
+    #41718b 95%,
+    #427a91 100%
+    );
+}
+
+/* showbox */
+.showbox{
+  background-color: rgba(238, 238, 238, 1);
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+.showbox-title{
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(66, 152, 157, 1);
+}
+.showbox-pic{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.showbox-pic img{
+  width: 100%;
+}
+.showbox-button{
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(66, 147, 155, 1);
+  border-radius: 3px;
+  margin: 20px auto 0;
+}
+
+/* detail intro */
+.common-item{
+  width: 90%;
+  margin: 0 auto;
+}
+.ci-left-img{
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.ci-left-img img{
+  width: 39px;
+  height: 39px;
+}
+.ci-left-txt{
+  width: 39px;
+  text-align: center;
+  font-family: 'tt';
+}
+.ci-right{
+  line-height: 22px;
+}
+.fs-tit{
+  font-size: 13px;
+}
+.ci-right .fs-nor{
+  font-size: 12px;
+}
+.ci-left-txt .fs-tt{
+  font-size: 16px;
+}
+
+
+/* deadline */
+.deadline{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.deadline-title, .deadline-rest{
+  display: inline-block;
+  vertical-align: bottom;
+  color: rgba(62, 179, 157, 1);
+  background-color: rgba(13, 15, 5, 0.7);
+}
+.deadline-title{
+  width: 20px;
+  height: 52px;
+  overflow: visible;
+  font-size: 52px;
+  line-height: 58px;
+  text-indent: -0.2em;
+  position: relative;
+}
+.deadline-title:before, .deadline-title:after{
+  position: absolute;
+  left: -26px;
+  content: '';
+  width: 26px;
+  height: 25px;
+  background-color: rgba(13, 15, 5, 0.7);
+  z-index: 9;
+}
+.deadline-title:before{
+  top: 0;
+}
+.deadline-title:after{
+  bottom: 0;
+}
+.deadline-title b{
+  font-weight: normal;
+  position: relative;
+  z-index: 19;
+}
+.deadline-rest{
+  width: 100px;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 25px;
+  font-size: 21px;
+}
