@@ -122,9 +122,7 @@ body{
   height: 35px;
   width: 100px;
   text-align: center;
-  letter-spacing: 2px;
   border-radius: 3px;
-  text-shadow: 1px 1px 1px rgba(29, 29, 29 ,0.29);
 }
 .candy-info{
   font-size: 11px;
