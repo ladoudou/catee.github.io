@@ -2,8 +2,8 @@
 @font-face { 
   font-family: 'tt'; 
   src: url('../font/tt.woff') format('woff'); /* chrome、firefox */ 
-
 } 
+
 /* 初始化 */
 body{
   color: #fff;
@@ -21,6 +21,20 @@ body{
 }
 .oh{
   overflow: hidden;
+}
+.fs-tit{
+  font-size: 13px;
+}
+.fs-nor{
+  font-size: 12px;
+}
+.fs-tt{
+  font-size: 28px;
+  font-family: 'tt';
+}
+.fs-tt-s{
+  font-size: 24px;
+  font-family: 'tt';
 }
 
 /* 背景 */
@@ -83,7 +97,13 @@ body{
 /* detail intro */
 .common-item{
   width: 90%;
+  min-height: 40px;
   margin: 0 auto;
+  padding: 10px 0;
+}
+.first{
+  margin-top: 10px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.24);
 }
 .ci-left-img{
   width: 39px;
@@ -96,22 +116,14 @@ body{
   height: 39px;
 }
 .ci-left-txt{
+  margin-right: 10px;
   width: 39px;
   text-align: center;
-  font-family: 'tt';
 }
 .ci-right{
   line-height: 22px;
 }
-.fs-tit{
-  font-size: 13px;
-}
-.ci-right .fs-nor{
-  font-size: 12px;
-}
-.ci-left-txt .fs-tt{
-  font-size: 16px;
-}
+
 
 
 /* deadline */

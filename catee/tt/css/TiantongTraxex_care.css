@@ -1,0 +1,50 @@
+.take-care{
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 15px;
+}
+.tc-3Q{
+  padding: 0 5%;
+}
+.tc-3Q{
+  padding: 6px 0;
+}
+.tc-please{
+  -webkit-column-count: 3;
+  column-count: 3;
+  -webkit-column-rule: solid 1px rgba(255, 255, 255, 0.4);
+  column-rule: solid 1px rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+.tc-please section span{
+  vertical-align: middle;
+  padding: 0 5px;
+}
+.tc-take-me{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.tm-type-in{
+  width: 66.7%;
+  height: 30px;
+  color: #959595;
+  font-style: italic;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  padding: 0 10px;
+  line-height: 30px;
+  margin-top: 5px;
+}
+.tm-say-a-word{
+  width: 23.3%;
+  height: 30px;
+  color: #fff;
+  background-color: rgba(66, 147, 155, 1);
+  border: none;
+  border-radius: 0 3px 3px 0;
+  margin-top: 5px;
+}
+.sl-angel, .sl-date{
+  margin-right: 10px;
+}
+.have-line{
+  border-bottom: solid 1px rgba(255, 255, 255, 0.24);
+}

@@ -1,4 +1,9 @@
 @charset "utf-8";
+@font-face { 
+  font-family: 'tt'; 
+  src: url('../font/tt.woff') format('woff'); /* chrome、firefox */ 
+} 
+
 /* 初始化 */
 body{
   color: #fff;
@@ -13,6 +18,23 @@ body{
 }
 .fr{
   float: right;
+}
+.oh{
+  overflow: hidden;
+}
+.fs-tit{
+  font-size: 13px;
+}
+.fs-nor{
+  font-size: 12px;
+}
+.fs-tt{
+  font-size: 28px;
+  font-family: 'tt';
+}
+.fs-tt-s{
+  font-size: 24px;
+  font-family: 'tt';
 }
 
 /* 背景 */
@@ -48,13 +70,14 @@ body{
   position: absolute;
   width: 32px;
   height: 32px;
-  background-color: rgba(62, 179, 157, 1);
+  background-color: rgba(62, 179, 157, 0.95);
   border-radius: 50%;
   line-height: 32px;
   font-size: 10px;
   text-align: center;
   top: 15px;
   left: 15px;
+  box-shadow: 1px 1px 1px rgba(29, 29, 29, 0.29);
 }
 .timing-egg-fixed{
   position: fixed !important;
