@@ -1,31 +1,44 @@
 .take-care{
-  background-color: rgba(255, 255, 255, 0.15);
   margin-bottom: 15px;
 }
 .tc-3Q{
-  padding: 0 5%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  -webkit-align-items: center;
+  align-items: center;
 }
-.tc-3Q{
-  padding: 6px 0;
+.tc-3Q:after{
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 10px;
+  left: 50%;
+  margin-left: -1px;
 }
-.tc-please{
-  -webkit-column-count: 3;
-  column-count: 3;
-  -webkit-column-rule: solid 1px rgba(255, 255, 255, 0.4);
-  column-rule: solid 1px rgba(255, 255, 255, 0.4);
-  text-align: center;
-}
-.tc-please section span{
+.tc-3Q span{
   vertical-align: middle;
-  padding: 0 5px;
 }
+.tc-item-1, .tc-item-2{
+  width: 50%;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+}
+
 .tc-take-me{
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.20);
 }
 .tm-type-in{
   width: 66.7%;
   height: 30px;
   color: #959595;
+  font-size: 13px;
   font-style: italic;
   border: none;
   border-radius: 3px 0 0 3px;
@@ -36,10 +49,12 @@
   width: 23.3%;
   height: 30px;
   color: #fff;
-  background-color: rgba(66, 147, 155, 1);
+  background-color: rgba(91, 194, 203, 1);
+  font-size: 14px;
   border: none;
   border-radius: 0 3px 3px 0;
   margin-top: 5px;
+  outline: none;
 }
 .sl-angel, .sl-date{
   margin-right: 10px;
