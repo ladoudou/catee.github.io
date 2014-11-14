@@ -20,7 +20,7 @@
 
   SandGlass.prototype = {
 
-    delta: 0,
+    delta: 1000,
 
     init: function () {
       var self = this;

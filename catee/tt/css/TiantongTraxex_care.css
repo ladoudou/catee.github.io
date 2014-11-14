@@ -5,8 +5,8 @@
   width: 100%;
   position: relative;
   display: flex;
-  -webkit-flex-flow: row;
-  flex-flow: row;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-align-items: center;
   align-items: center;
 }
