@@ -20,7 +20,7 @@
 
   SandGlass.prototype = {
 
-    delta: 1000,
+    delta: 0,
 
     init: function () {
       var self = this;
@@ -34,7 +34,7 @@
       self.restHours = timeArr[1] >> 0,
       self.restMinutes = timeArr[2] >> 0,
       self.restSeconds = timeArr[3] >> 0;
-      self.setDom().timing();
+      self.setDom().timing().resetBGB();
       return this;
     },
 
@@ -45,6 +45,7 @@
         self.timer = setTimeout(arguments.callee, self.delta);
         self.stepSeconds();
       }, self.delta);
+      return this;
     },
 
     stepSeconds: function () {
@@ -68,6 +69,7 @@
         minutesEle = self.minutesEle,
         restMinutes = -- self.restMinutes;
         text = null;
+      restMinutes % 2 === 0 && self.resetBGB();
       if (restMinutes === -1) {
         restMinutes = self.restMinutes = 59;
         if (! self.stepHoures()) {
@@ -153,6 +155,19 @@
       return this;
     },
 
+    resetBGB: function () {
+      var self = this,
+        containerEle = self.containerEle,
+        restMinutes = self.restMinutes,
+        restHours = self.restHours,
+        restDays = self.restDays,
+        totle = 7 * 24 * 60,
+        passed = restDays * 24 * 60 + restHours * 60 + restMinutes,
+        precent = 100 - passed * 100 / totle;
+      console.log(precent);
+      containerEle.setAttribute('style', 'background-image: -webkit-linear-gradient(0deg, rgba(204, 204, 204, 0) 0%, rgba(204, 204, 204, 0) ' + precent + '%, rgba(204, 204, 204, 1) ' + precent + '%, rgba(204, 204, 204, 1) 100%), -webkit-linear-gradient(0deg, rgba(1, 173, 181, 1) 0%, rgba(6, 193, 174, 1) 100%)');
+    },
+
     removeChildren: function (parent) {
       while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
@@ -174,6 +189,6 @@
 
 })(window, document);
 
-new SandGlass({containerId:'#deadline',goToHeaven:function(){alert('它去了天堂，那里没有痛苦。')}})
+var s = new SandGlass({containerId:'#deadline',goToHeaven:function(){alert('它去了天堂，那里没有痛苦。')}})
 
 
