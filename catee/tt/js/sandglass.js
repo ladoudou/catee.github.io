@@ -164,7 +164,7 @@
         totle = 7 * 24 * 60,
         passed = restDays * 24 * 60 + restHours * 60 + restMinutes,
         precent = 100 - passed * 100 / totle;
-      console.log(precent);
+      // console.log(precent);
       containerEle.setAttribute('style', 'background-image: -webkit-linear-gradient(0deg, rgba(204, 204, 204, 0) 0%, rgba(204, 204, 204, 0) ' + precent + '%, rgba(204, 204, 204, 1) ' + precent + '%, rgba(204, 204, 204, 1) 100%), -webkit-linear-gradient(0deg, rgba(1, 173, 181, 1) 0%, rgba(6, 193, 174, 1) 100%)');
     },
 

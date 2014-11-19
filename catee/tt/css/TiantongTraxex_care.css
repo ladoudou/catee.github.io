@@ -1,22 +1,18 @@
 .take-care{
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 .tc-3Q{
   width: 100%;
   position: relative;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-align-items: center;
-  align-items: center;
+  display: -webkit-flex;
 }
 .tc-3Q:after{
   position: absolute;
   content: '';
   width: 2px;
-  height: 20px;
+  height: 24px;
   background-color: rgba(255, 255, 255, 0.4);
-  top: 10px;
+  top: 12px;
   left: 50%;
   margin-left: -1px;
 }
@@ -28,37 +24,84 @@
   -webkit-flex: 1;
   flex: 1;
   text-align: center;
-  line-height: 40px;
+  line-height: 47px;
 }
 
 .tc-take-me{
   background-color: rgba(255, 255, 255, 0.20);
 }
+.take-me-box{
+  display: -webkit-flex;
+  margin-top: 6px;
+}
 .tm-type-in{
-  width: 66.7%;
-  height: 30px;
+  -webkit-flex: 3;
+  height: 35px;
   color: #959595;
-  font-size: 13px;
+  font-size: 16px;
   font-style: italic;
   border: none;
-  border-radius: 3px 0 0 3px;
-  padding: 0 10px;
-  margin-top: 5px;
+  border-radius: 5px 0 0 5px;
+  padding: 0 12px;
 }
 .tm-say-a-word{
-  width: 23.3%;
-  height: 30px;
+  -webkit-flex: 1;
+  height: 35px;
   color: #fff;
   background-color: rgba(91, 194, 203, 1);
-  font-size: 14px;
+  font-size: 16px;
   border: none;
-  border-radius: 0 3px 3px 0;
-  margin-top: 5px;
+  border-radius: 0 5px 5px 0;
   outline: none;
+  -webkit-appearance: none;
 }
 .sl-angel, .sl-date{
-  margin-right: 10px;
+  margin-right: 12px;
 }
 .have-line{
   border-bottom: solid 1px rgba(255, 255, 255, 0.24);
+}
+
+/* 评论动画 */
+.tc-show-love .common-item{
+  min-height: 0;
+  -webkit-transition: max-height 5s ease-in-out, opacity .3s ease-in-out .1s, padding .3s ease-in-out;
+  max-height: 10000px;
+  opacity: 1;
+  overflow: hidden;
+}
+.tc-show-love section.init{
+  padding: 0 5%!important;
+  max-height: 0!important;
+  opacity: 0!important;
+}
+
+@media screen and (max-width:320px){
+  .take-care{
+    margin-bottom: 15px;
+  }
+  .tc-3Q:after{
+    height: 20px;
+    top: 10px;
+  }
+  .tc-item-1, .tc-item-2{
+    line-height: 40px;
+  }
+  .take-me-box{
+    margin-top: 5px;
+  }
+  .tm-type-in{
+    height: 30px;
+    font-size: 14px;
+    border-radius: 3px 0 0 3px;
+    padding: 0 10px;
+  }
+  .tm-say-a-word{
+    height: 30px;
+    font-size: 14px;
+    border-radius: 0 3px 3px 0;
+  }
+  .sl-angel, .sl-date{
+    margin-right: 10px;
+  }
 }

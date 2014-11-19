@@ -2,11 +2,15 @@
 @font-face { 
   font-family: 'tt'; 
   src: url('../font/tt.woff') format('woff'); /* chrome、firefox */ 
-} 
+}
 
 /* 初始化 */
 body{
+  -webkit-user-select: none;
   color: #fff;
+}
+p{
+  word-wrap: break-word;
 }
 
 /* sth */
@@ -23,10 +27,10 @@ body{
   overflow: hidden;
 }
 .fs-sma{
-  font-size: 12px;
+  font-size: 14px;
 }
 .fs-nor{
-  font-size: 14px;
+  font-size: 18px;
 }
 .fftt{
   font-family: 'tt';
@@ -43,6 +47,9 @@ body{
 .fs-tc{
   font-size: 32px;
 }
+.ft-sb{
+  font-size: 50px;
+}
 
 /* 背景 */
 .background{
@@ -53,70 +60,138 @@ body{
 .showbox{
   text-align: center;
   background-color: #fff;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 .showbox-title{
-  font-size: 15px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 35px;
   color: rgba(66, 152, 157, 1);
 }
 .showbox-pic{
-  width: 100%;
+  width: 414px;
+  height: 414px;
+  overflow: hidden;
   position: relative;
 }
 .showbox-pic img{
+  display: block;
+  width: 414px;
+  height: 414px;
+}
+#showbox_scroll{
+  width: 414px;
+  height: 414px;
+  overflow: hidden;
+}
+.showbox-item{
+  float: left;
+  width: 414px;
+  overflow: hidden;
+}
+.scroll-card-w{
+  width: 100000px;
+  -webkit-transform: -webkit-translate3d(0,0,0);
+}
+.scroll-card-i{
+  float: left;
+}
+.page{
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+.dot1-active, .dot1{
+  display: inline-block;
+  margin: 0 3px;
+  width: 8px;
+  height: 8px;
+  border: solid 1px;
+  border-radius: 50%;
+}
+.dot1{
+  border-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0);
+}
+.dot1-active{
+  border-color: rgba(91, 194, 203, 1);
+  background-color: rgba(91, 194, 203, 1);
+}
+.help-icon{
+  position: absolute;
+  line-height: 80px;
+  top: 104px;
+  right: 0;
+  color: rgba(91, 194, 203, 1);
+  text-align: center;
+  width: 100px;
+  height: 80px;
+}
+.help-icon:after{
+  position: absolute;
+  height: 80px;
+  top: 0;
+  left: 0;
+  content: '助养';
+  font-size: 14px;
   width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  line-height: 78px;
 }
 .showbox-button{
-  width: 240px;
-  height: 45px;
-  line-height: 45px;
-  font-size: 19px;
+  width: 280px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(91, 194, 203, 1);
-  border-radius: 3px;
-  margin: 15px auto 0;
+  border-radius: 5px;
+  margin: 18px auto 0;
+}
+.checking{
+  color: rgba(112, 112, 112, 1) !important;
+  background-color: rgba(238, 238, 238, 1) !important;
 }
 
 /* detail intro */
 .very-sweety{
   background: #fff;
-  color: rgba(83, 83, 83, 1);
-  padding-bottom: 15px; 
+  color: rgba(112, 112, 112, 1);
+  padding-bottom: 18px; 
 }
 .common-item{
   width: 90%;
-  min-height: 40px;
+  min-height: 47px;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 12px 5%;
 }
 .first{
-  border-top: solid 1px rgba(238, 238, 238, 0.24);
-  border-bottom: solid 1px rgba(238, 238, 238, 0.24);
+  border-top: solid 1px rgba(238, 238, 238, 0.4);
+  border-bottom: solid 1px rgba(238, 238, 238, 0.4);
 }
 .ci-left-img{
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 6px 12px 0 0;
 }
 .ci-left-img img{
-  width: 38px;
-  height: 38px;
+  width: 45px;
+  height: 45px;
 }
 .ci-left-txt{
-  margin-right: 10px;
-  width: 39px;
+  margin-right: 12px;
+  width: 44px;
   text-align: center;
 }
 .ci-right{
-  line-height: 22px;
+  line-height: 26px;
 }
 
 /* deadline */
 .deadline{
   width: 100%;
-  height: 30px;
+  height: 35px;
   background-image: -webkit-linear-gradient(
     0deg,
     rgba(204, 204, 204, 0) 0%,
@@ -130,8 +205,180 @@ body{
   );
 }
 .deadline-rest{
-  width: 100%;
-  line-height: 30px;
+  width: auto;
+  padding-left: 40px;
+  line-height: 35px;
   text-align: center;
-  font-size: 19px;
+  font-size: 21px;
+  position: relative;
+}
+.deadline-rest:after{
+  position: absolute;
+  text-align: center;
+  width: 26px;
+  height: 35px;
+  top: 0;
+  left: 50%;
+  margin-left: -100px;
+  content: "C";
+  font-size: 26px;
+  line-height: 39px;
+  -webkit-animation: rotate 10s ease-in-out 5s infinite;
+}
+@-webkit-keyframes 'rotate' {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  4% {
+    -webkit-transform: rotate(180deg);
+  }
+  54% {
+    -webkit-transform: rotate(180deg);
+  }
+  58% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width:375px){
+  .showbox-pic{
+    width: 375px;
+    height: 375px;
+  }
+  .showbox-pic img{
+    width: 375px;
+    height: 375px;
+  }
+  #showbox_scroll{
+    width: 375px;
+    height: 375px;
+    overflow: hidden;
+  }
+  .showbox-item{
+    float: left;
+    width: 375px;
+    overflow: hidden;
+  }
+  .help-icon{
+    top: 95px;
+  }
+}
+
+@media screen and (max-width:320px){
+  /* sth */
+  .fs-sma{
+    font-size: 12px;
+  }
+  .fs-nor{
+    font-size: 14px;
+  }
+  .ft-vs-s{
+    font-size: 28px;
+  }
+  .ft-vs{
+    font-size: 32px;
+  }
+  .fs-tc{
+    font-size: 32px;
+  }
+  .ft-sb{
+    font-size: 50px;
+  }
+
+  /* showbox */
+  .showbox{
+    padding-bottom: 15px;
+  }
+  .showbox-title{
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .showbox-pic{
+    width: 320px;
+    height: 320px;
+
+  }
+  .showbox-pic img{
+    width: 320px;
+    height: 320px;
+  }
+  #showbox_scroll{
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+  }
+  .showbox-item{
+    float: left;
+    width: 320px;
+    overflow: hidden;
+  }
+  .dot1-active, .dot1{
+    width: 6px;
+    height: 6px;
+  }
+  .help-icon{
+    line-height: 70px;
+    width: 90px;
+    height: 70px;
+    top: 80px;
+  }
+  .help-icon:after{
+    height: 70px;
+    font-size: 13px;
+    line-height: 68px;
+  }
+  .showbox-button{
+    width: 240px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+    border-radius: 3px;
+    margin: 15px auto 0;
+  }
+
+  /* detail intro */
+  .very-sweety{
+    padding-bottom: 15px; 
+  }
+  .common-item{
+    min-height: 40px;
+    padding: 10px 5%;
+  }
+  .ci-left-img{
+    width: 38px;
+    height: 38px;
+    margin: 5px 10px 0 0;
+  }
+  .ci-left-img img{
+    width: 38px;
+    height: 38px;
+  }
+  .ci-left-txt{
+    margin-right: 10px;
+    width: 39px;
+  }
+  .ci-right{
+    line-height: 22px;
+  }
+
+  /* deadline */
+  .deadline{
+    height: 30px;
+  }
+  .deadline-rest{
+    line-height: 30px;
+    font-size: 20px;
+    padding-left: 35px;
+  }
+  .deadline-rest:after{
+    width: 24px;
+    height: 30px;
+    margin-left: -95px;
+    font-size: 25px;
+    line-height: 34px;
+  }
 }

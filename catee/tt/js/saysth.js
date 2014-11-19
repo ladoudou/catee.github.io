@@ -94,7 +94,7 @@ SD_login = {
   SDC.prototype = {
     classArr: {
       btns: ['tc-3Q', 'tc-item-1', 'fftt fs-tc', 'num', 'tc-item-2'],
-      typein: ['tc-take-me', 'common-item', 'fl ci-left-img oh', 'oh ci-right', 'tm-type-in', 'tm-say-a-word'],
+      typein: ['tc-take-me', 'common-item', 'fl ci-left-img oh', 'take-me-box', 'tm-type-in', 'tm-say-a-word'],
       list: ['tc-show-love', 'common-item have-line', 'common-item', 'fl ci-left-img oh', 'oh ci-right', 'fs-sma', 'sl-angel', 'sl-date', 'sl-time', 'fs-nor']
     },
 
@@ -185,16 +185,16 @@ SD_login = {
           '</section>',
         '</div>',
       '</div>');*/
-      var typeinDiv1 = doc.createElement('div'),
+      var // typeinDiv1 = doc.createElement('div'),
         typeinDiv2 = doc.createElement('div'),
         typeinDiv3 = doc.createElement('div'),
         typeinSection = doc.createElement('section'),
-        typeinImg = doc.createElement('img'),
+        // typeinImg = doc.createElement('img'),
         typeinInput1 = doc.createElement('input'),
         typeinInput2 = doc.createElement('input');
-      typeinImg.setAttribute('src', win.SD_login.angel.portrait);
-      typeinDiv1.setAttribute('class', classArr.typein[2]);
-      typeinDiv1.appendChild(typeinImg);
+      // typeinImg.setAttribute('src', win.SD_login.angel.portrait);
+      // typeinDiv1.setAttribute('class', classArr.typein[2]);
+      // typeinDiv1.appendChild(typeinImg);
       typeinInput1.setAttribute('type', 'text');
       typeinInput1.setAttribute('class', classArr.typein[4]);
       typeinInput1.setAttribute('placeholder', '我也说说...');
@@ -207,7 +207,7 @@ SD_login = {
       typeinDiv2.appendChild(typeinInput1);
       typeinDiv2.appendChild(typeinInput2);
       typeinSection.setAttribute('class', classArr.typein[1]);
-      typeinSection.appendChild(typeinDiv1);
+      // typeinSection.appendChild(typeinDiv1);
       typeinSection.appendChild(typeinDiv2);
       typeinDiv3.setAttribute('class', classArr.typein[0]);
       typeinDiv3.appendChild(typeinSection);
@@ -292,7 +292,11 @@ SD_login = {
         frag = doc.createDocumentFragment(),
         dat = self.adjustDate(data.content_ptime),
         section = self.createsectionAndDiv(data.portrait, data.nick, dat.date, dat.time, data.content_txt, self.classArr.list);
-      section.setAttribute('class', self.classArr.list[1]);
+      section.setAttribute('data-type', 'reply');
+      section.setAttribute('class', self.classArr.list[1] + ' init');
+      setTimeout(function () {
+        section.setAttribute('class', self.classArr.list[1]);
+      }, 1);
       frag.appendChild(section);
       listEle.insertBefore(frag, listEle.firstChild);
       return this;
@@ -300,12 +304,22 @@ SD_login = {
 
     clickHandler: function (that) {
       return function (e) {
-        var t = e.target,
+        var t = e.target, p = t, typeinEle = that.$('[data-type="typein"]'),
           tDateType = t.getAttribute('data-type');
+
+        while (! tDateType) {
+          p = p.parentNode;
+          if (p.tagName.toLowerCase() === 'body') {
+            break;
+          }
+          tDateType = p.getAttribute('data-type');
+        }
+
         switch (tDateType) {
           case 'submit':
-            var content_txt = that.containerEle.querySelector('[data-type="typein"]').value;
+            var content_txt = typeinEle.value;
             if (! content_txt) {
+              typeinEle.focus();
               return;
             }
             if (that.SDCId.split('-')[0] === 'test') {
@@ -320,6 +334,15 @@ SD_login = {
               };
             }
             that.insert(fakeData).resetTypein();
+            break;
+          case 'reply':
+            var r_nameEle = p.querySelector('span.sl-angel'),
+              r_name = r_nameEle.firstChild.nodeValue;
+            if (r_name === SD_login.angel.nick) {
+              break;
+            }
+            typeinEle.value = ['回复 ', r_name, ' : '].join('');
+            typeinEle.focus();
             break;
           default:
             break;
@@ -388,6 +411,7 @@ SD_login = {
       div2.setAttribute('class', classArr[4]);
       div2.appendChild(p1);
       div2.appendChild(p2);
+      section.setAttribute('data-type', 'reply');
       section.appendChild(div1);
       section.appendChild(div2);
       return section;
