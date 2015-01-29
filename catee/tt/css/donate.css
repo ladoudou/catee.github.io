@@ -67,6 +67,7 @@ section{
 .donate-typein .icon{
   -webkit-flex: 1;
   position: relative;
+  text-align: center;
   width: 72px;
   height: 60px;
   line-height: 64px;
@@ -82,8 +83,8 @@ section{
   line-height: 58px;
   top: 0;
   left: 0;
+  right: 0;
   text-align: center;
-  width: 72px;
 }
 .donate-typein .typein{
   -webkit-flex: 2.6;
@@ -204,9 +205,6 @@ section{
   .donate-typein .icon{
     width: 64px;
   }
-  .donate-typein .icon:after{
-    width: 64px;
-  }
   .donate-typein .typein{
     -webkit-flex: 2.4;
     font-size: 38px;
@@ -249,7 +247,6 @@ section{
     height: 50px;
   }
   .donate-typein .icon:after{
-    width: 58px;
     line-height: 46px;
   }
   .donate-typein .typein{

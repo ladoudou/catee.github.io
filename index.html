@@ -4,8 +4,279 @@
   <meta charset="UTF-8">
   <title>Catee</title>
   <link rel="shortcut icon" href="./img/title.png" />
+  <style>
+  /* init */
+  html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0;font-weight:normal;}
+  fieldset,img{border:none;}
+  img{vertical-align:top;}
+  address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}
+  ul,ol{list-style:none;}
+  input{padding-top:0;padding-bottom:0;}
+  input::-moz-focus-inner{border:none;padding:0;}
+  select,input{vertical-align:middle;}
+  select,input,textarea{font-size:12px;margin:0;}
+  input[type="text"],input[type="password"],textarea{outline-style:none;-webkit-appearance:none;}
+  textarea{resize:none;}
+  table{border-collapse:collapse;}
+  body{font: 15px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","Arial","SimSun","\5B8B\4F53"; color: #666;}
+  a{color:#333; text-decoration:none;}
+  a:visited{color:#333;}
+  a:hover{color:papayawhip;}
+  a:focus{outline:none;}
+
+  /* common */
+  .clearfix{zoom:1;}
+  .clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+  .transition{
+    -webkit-transition: all .2s ease-in-out;
+  }
+
+  /* catee-HW */
+  .transition-HW{
+    -webkit-transition: -webkit-filter .2s ease-in-out, opacity .2s ease-in-out, -webkit-transform 1s ease-out;
+  }
+  .catee-HW{
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgb(20%, 20%, 20%);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+  .catee-HW-items{
+    position: absolute;
+    background-size: 100% 100%; background-repeat: no-repeat; background-position: 0 0;
+    -webkit-filter: blur(10px);
+    -webkit-transform: translate3d(0, 0, 0) rotateZ(0deg);
+    opacity: .1;
+  }
+  .catee-HW-items:hover, .hover{
+    -webkit-filter: blur(3px)!important;
+    opacity: 1!important;
+  }
+  .p1{
+    top: 29.26%; left: 7.03%;
+    width: 2.23%; height: 14.77%;
+    background-image: url(img/1.png);
+  }
+  .p2{
+    top: 44.71%; left: 6.76%;
+    width: 2.54%; height: 15.04%;
+    background-image: url(img/2.png);
+  }
+  .p3{
+    top: 42.79%; left: 9.30%;
+    width: 3.75%; height: 3.50%;
+    background-image: url(img/3.png);
+  }
+  .p4{
+    top: 33.72%; left: 13.05%;
+    width: 2.70%; height: 21.98%;
+    background-image: url(img/4.png);
+  }
+  .p5{
+    top: 45.67%; left: 16.64%;
+    width: 6.52%; height: 8.17%;
+    background-image: url(img/5.png);
+  }
+  .p6{
+    top: 50.07%; left: 16.52%;
+    width: 5.82%; height: 9.00%;
+    background-image: url(img/6.png);
+  }
+  .p7{
+    top: 30.56%; left: 25.04%;
+    width: 2.93%; height: 26.92%;
+    background-image: url(img/7.png);
+  }
+  .p8{
+    top: 26.17%; left: 28.79%;
+    width: 3.63%; height: 34.00%;
+    background-image: url(img/8.png);
+  }
+  .p9{
+    top: 44.51%; left: 34.77%;
+    width: 6.37%; height: 7.83%;
+    background-image: url(img/9.png);
+  }
+  .p10{
+    top: 51.79%; left: 34.88%;
+    width: 6.13%; height: 6.25%;
+    background-image: url(img/10.png);
+  }
+  .p11{
+    top: 38.32%; left: 45.86%;
+    width: 4.22%; height: 18.61%;
+    background-image: url(img/11.png);
+  }
+  .p12{
+    top: 46.15%; left: 49.30%;
+    width: 2.66%; height: 8.79%;
+    background-image: url(img/12.png);
+  }
+  .p13{
+    top: 46.15%; left: 50.31%;
+    width: 4.57%; height: 10.92%;
+    background-image: url(img/13.png);
+  }
+  .p14{
+    top: 27.34%; left: 52.93%;
+    width: 7.66%; height: 36.40%;
+    background-image: url(img/14.png);
+  }
+  .p15{
+    top: 44.51%; left: 59.92%;
+    width: 6.41%; height: 9.27%;
+    background-image: url(img/15.png);
+  }
+  .p16{
+    top: 50.48%; left: 59.57%;
+    width: 5.66%; height: 7.07%;
+    background-image: url(img/16.png);
+  }
+  .p17{
+    top: 41.96%; left: 68.13%;
+    width: 2.42%; height: 17.86%;
+    background-image: url(img/17.png);
+  }
+  .p18{
+    top: 42.10%; left: 70.00%;
+    width: 4.06%; height: 8.24%;
+    background-image: url(img/18.png);
+  }
+  .p19{
+    top: 33.52%; left: 75.27%;
+    width: 3.63%; height: 27.47%;
+    background-image: url(img/19.png);
+  }
+  .p20{
+    top: 40.87%; left: 80.70%;
+    width: 8.87%; height: 19.30%;
+    background-image: url(img/20.png);
+  }
+  .p21{
+    top: 26.92%; left: 87.83%;
+    width: 4.88%; height: 34.00%;
+    background-image: url(img/21.png);
+  }
+  .ts1{
+    -webkit-transform: translate3d(-60px, -80px, 0) rotateZ(30deg) !important;
+  }
+  .ts2{
+    -webkit-transform: translate3d(-30px, 50px, 0) rotateZ(50deg) !important;
+  }
+  .ts3{
+    -webkit-transform: translate3d(10px, -50px, 0) rotateZ(-10deg) !important;
+  }
+  .ts4{
+    -webkit-transform: translate3d(-10px, 120px, 0) rotateZ(-20deg) !important;
+  }
+  .ts5{
+    -webkit-transform: translate3d(0, -30px, 0) rotateZ(-60deg) !important;
+  }
+  .ts6{
+    -webkit-transform: translate3d(30px, 50px, 0) rotateZ(-40deg) !important;
+  }
+  .ts7{
+    -webkit-transform: translate3d(-30px, -20px, 0) rotateZ(-170deg) !important;
+  }
+  .ts8{
+    -webkit-transform: translate3d(30px, 20px, 0) rotateZ(150deg) !important;
+  }
+  .ts9{
+    -webkit-transform: translate3d(-80px, -150px, 0) rotateZ(-30deg) !important;
+  }
+  .ts10{
+    -webkit-transform: translate3d(-30px, 130px, 0) rotateZ(30deg) !important;
+  }
+  .ts11{
+    -webkit-transform: translate3d(-30px, 0, 0) rotateZ(30deg) !important;
+  }
+  .ts12{
+    -webkit-transform: translate3d(0, 140px, 0) rotateZ(-1000deg) !important;
+  }
+  .ts13{
+    -webkit-transform: translate3d(50px, 180px, 0) rotateZ(1030deg) !important;
+  }
+  .ts14{
+    -webkit-transform: translate3d(0, -50%, 0) rotateZ(-90deg) !important;
+  }
+  .ts15{
+    -webkit-transform: translate3d(60%, -200%, 0) rotateZ(30deg) !important;
+  }
+  .ts16{
+    -webkit-transform: translate3d(-60%, 0, 0) rotateZ(30deg) !important;
+  }
+  .ts17{
+    -webkit-transform: translate3d(30%, 100%, 0) rotateZ(0deg) !important;
+  }
+  .ts18{
+    -webkit-transform: translate3d(-60%, 70%, 0) rotateZ(-60deg) !important;
+  }
+  .ts19{
+    -webkit-transform: translate3d(130%, -60%, 0) rotateZ(50deg) !important;
+  }
+  .ts20{
+    -webkit-transform: translate3d(130%, 0, 0) rotateZ(300deg) !important;
+  }
+  .ts21{
+    -webkit-transform: translate3d(80%, 100%, 0) rotateZ(-90deg) !important;
+  }
+
+  </style>
 </head>
 <body>
   <p>Hello world!</p>
+
+  <div class="catee-HW" id="catee_HW">
+    <div class="catee-HW-items transition-HW p1 ts1"></div>
+    <div class="catee-HW-items transition-HW p2 ts2"></div>
+    <div class="catee-HW-items transition-HW p3 ts3"></div>
+    <div class="catee-HW-items transition-HW p4 ts4"></div>
+    <div class="catee-HW-items transition-HW p5 ts5"></div>
+    <div class="catee-HW-items transition-HW p6 ts6"></div>
+    <div class="catee-HW-items transition-HW p7 ts7"></div>
+    <div class="catee-HW-items transition-HW p8 ts8"></div>
+    <div class="catee-HW-items transition-HW p9 ts9"></div>
+    <div class="catee-HW-items transition-HW p10 ts10"></div>
+    <div class="catee-HW-items transition-HW p11 ts11"></div>
+    <div class="catee-HW-items transition-HW p12 ts12"></div>
+    <div class="catee-HW-items transition-HW p13 ts13"></div>
+    <div class="catee-HW-items transition-HW p14 ts14"></div>
+    <div class="catee-HW-items transition-HW p15 ts15"></div>
+    <div class="catee-HW-items transition-HW p16 ts16"></div>
+    <div class="catee-HW-items transition-HW p17 ts17"></div>
+    <div class="catee-HW-items transition-HW p18 ts18"></div>
+    <div class="catee-HW-items transition-HW p19 ts19"></div>
+    <div class="catee-HW-items transition-HW p20 ts20"></div>
+    <div class="catee-HW-items transition-HW p21 ts21"></div>
+  </div>
+
+  <script src="js/lib/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script src="js/lib/underscore.js" type="text/javascript"></script>
+  <script>
+  (function (win, doc, $, _) {
+    var cateeHW = $('#catee_HW'),
+      count = 0;
+    cateeHW.on('click', function (e) {
+      var t = e.target,
+        $t = $(t),
+        tClassName = $t.attr('class');
+      if (! /catee-HW-items/.test(tClassName)) {
+        return;
+      }
+      var tsName = /ts\d\d?/.exec(tClassName);
+      if (! tsName) {
+        return;
+      }
+      $t.removeClass(tsName[0]).addClass('hover');
+      if (++ count >= 21) {
+        setTimeout(function () {
+          cateeHW.fadeOut();
+        }, 1000)
+      }
+    })
+  })(window, document, jQuery, _);
+  </script>
+
 </body>
 </html>

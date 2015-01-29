@@ -71,5 +71,13 @@
   <use xlink:href="#cat_dots" transform="translate(706,517),scale(0.8),rotate(50 100,800)" />
   <use xlink:href="#cat_dots" transform="translate(717,669),scale(0.6),rotate(30 100,800)" />
 
+  <defs>
+    <clipPath id="svgTextPath">
+      <text x="0" y="0" textLength="800px" lengthAdjust="spacing" font-family="Vollkorn" font-size="230px" font-weight="700" font-style="italic"> Blossom </text>
+    </clipPath>
+  </defs>
+
+  <image xlink:href="../img/title.png" x="800" y="400" width="600" height="200" clip-path="url(#svgTextPath)" />
+
 </svg>
 

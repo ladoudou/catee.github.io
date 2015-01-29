@@ -17,7 +17,6 @@
       setTimeout(function () {
         coverEle.className = 'donate-cover';
       }, 10);
-      doc.addEventListener('click', handler_close, 'false');
       var pt = deadlineEle.getAttribute('data-time'),
         nt = (pt.split(':')[0] >> 0) + 7,
         ntt = [nt, pt.split(':')[1], pt.split(':')[2], pt.split(':')[3]].join(':');
@@ -26,7 +25,6 @@
     }, 800)
   },
   handler_close = function (e) {
-    doc.removeEventListener('click', handler_close, 'false');
     coverEle.className = 'donate-cover hide-cover';
     setTimeout(function () {
       coverEle.style.display = 'none';
@@ -37,4 +35,5 @@
   };
   submitEle.addEventListener('click', handler_submit, 'false');
   checkEle.addEventListener('click', handler_ischeck, 'false');
+  coverEle.addEventListener('click', handler_close, 'false');
 })(window, document, s);

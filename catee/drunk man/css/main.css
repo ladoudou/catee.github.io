@@ -1,0 +1,67 @@
+body{
+  background-color: papayawhip;
+}
+
+.catee-city{
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  border: solid 5px #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(29, 29, 29, 0.29);
+  position: relative;
+}
+
+.catee-blocks{
+  width: 100%;
+  height: 100%;
+}
+
+.catee-subBlks{
+  width: 2px;
+  height: 2px;
+  float: left;
+  background-color: rgb(200, 201, 104);
+}
+
+.catee-drunkMan{
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input{
+  position: fixed;
+  left: 50px;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  background-color: pink;
+  color: #fff;
+  box-shadow: 0 0 3px rgba(100, 100, 100, 0.4);
+  text-shadow: 0 2px 3px rgba(200, 200, 200, 0.75);
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+}
+input:hover{
+  box-shadow: 0 0 5px rgba(100, 100, 100, 0.7);
+  text-shadow: 0 2px 4px rgba(200, 200, 200, 0.95);
+}
+input.walk{
+  top: 200px;
+}
+input.pause{
+  top: 260px;
+}
+input.over{
+  top: 320px;
+}
