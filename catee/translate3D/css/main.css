@@ -1,0 +1,58 @@
+
+/* 背景 */
+.catee-trans3d{
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-color: rgb(200, 200, 200);
+  -webkit-perspective: 900px;
+}
+
+/* 舞台 */
+.catee-circle-3d{
+  position: absolute;
+  top: 50%; right: 50%;
+  margin: -67.78px -41.58px 0 0;
+  width: 83.16px; height: 135.57px;
+  background-color: #fff;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+/* 演员 */
+.catee-c3d-items{
+  position: absolute;
+  top: 50%; right: 50%;
+  /*margin: -135px -83px 0 0;*/
+  margin: -67.78px -41.58px 0 0;
+  /*width: 166.33px; height: 269.14px;*/
+  width: 83.16px; height: 135.57px;
+  box-shadow: 0 0 3px rgba(255, 255, 0, 0.3);
+}
+.catee-c3d-items:after{
+  position: absolute;
+  content: '';
+  width: 90%; height: 5px;
+  bottom: -3px; left: 5%;
+  background-color: #666;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+}
+.catee-c3d-items img{
+  width: 100%; height: 100%;
+}
+
+.catee-circle-3d .catee-c3d-items:nth-child(1) { -webkit-transform: rotateY(0deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(2) { -webkit-transform: rotateY(24deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(3) { -webkit-transform: rotateY(48deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(4) { -webkit-transform: rotateY(72deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(5) { -webkit-transform: rotateY(96deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(6) { -webkit-transform: rotateY(120deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(7) { -webkit-transform: rotateY(144deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(8) { -webkit-transform: rotateY(168deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(9) { -webkit-transform: rotateY(192deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(10) { -webkit-transform: rotateY(216deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(11) { -webkit-transform: rotateY(240deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(12) { -webkit-transform: rotateY(264deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(13) { -webkit-transform: rotateY(288deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(14) { -webkit-transform: rotateY(312deg) translateZ(300px); }
+.catee-circle-3d .catee-c3d-items:nth-child(15) { -webkit-transform: rotateY(336deg) translateZ(300px); }
