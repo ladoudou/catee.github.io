@@ -20,6 +20,7 @@
 
 /* 演员 */
 .catee-c3d-items{
+  cursor: pointer;
   position: absolute;
   top: 50%; right: 50%;
   /*margin: -135px -83px 0 0;*/
