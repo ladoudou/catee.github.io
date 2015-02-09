@@ -6,7 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="renderer" content="webkit">
   <link rel="stylesheet" href="../../css/init.css">
-  <link rel="stylesheet" href="css/main2.css">
+  <link rel="stylesheet" href="css/main1.css">
+  <style>
+  .catee-circle-3d{
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: both;
+  }
+  @-webkit-keyframes rotate {
+    0% {-webkit-transform: rotateY(0deg);}
+    50% {-webkit-transform: rotateY(180deg);}
+    100% {-webkit-transform: rotateY(360deg);}
+  }
+  </style>
 </head>
 <body>
 
@@ -31,6 +46,5 @@
   </div>
 
   <script type="text/javascript" src="../../js/lib/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/main2.js"></script>
 </body>
 </html>
