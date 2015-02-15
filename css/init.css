@@ -18,3 +18,5 @@ a:hover{color:papayawhip;}
 a:focus{outline:none;}
 .clearfix{zoom:1;}
 .clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+
+.transition{-webkit-transition:all .3s ease-in-out;}
