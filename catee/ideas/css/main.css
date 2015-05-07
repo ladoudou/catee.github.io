@@ -95,6 +95,11 @@ ul.catee-hci-menu li a:hover{
 }
 
 
+section{
+  background-position: 0 0; background-attachment: fixed; background-size: 100% auto;
+}
 
-
+.catee-i_1{
+  background-image: url(../../../img/lol_h_2560-1440.jpg);
+}
 
