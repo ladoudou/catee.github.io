@@ -1,2 +1,4 @@
-/node-moudles/*/**
-/UI/*/**
+node_modules/
+UI/
+Gruntfile.js
+package.json
