@@ -1,0 +1,238 @@
+html, body{
+  height: 100%; width: 100%;
+}
+body{
+  max-width: 640px;
+  margin: 0 auto;
+}
+a, a:visited, a:hover, a:active{
+  color: #333;
+}
+/* header */
+header{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 42px;
+  overflow: hidden;
+  background-color: rgba(186, 225, 236, .38);
+  z-index: 99;
+}
+.logo, .search, .top-nav{
+  float: left;
+}
+.logo{
+  width: 50px; height: 42px;
+}
+.top-nav{
+  width: 50px; height: 42px;
+}
+.logo a, .top-nav a{
+  display: block;
+  width: 100%; height: 100%;
+}
+.search{
+  width: calc(100% - 100px); height: 30px;
+  margin-top: 6px;
+  line-height: 26px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.search-icon{
+  float: left;
+  width: 30px; height: 28px;
+}
+.search input{
+  font-size: 14px;
+  border: none;
+  padding: 0 0 0 4px;
+  overflow: hidden;
+  width: calc(100% - 34px); height: 28px;
+}
+
+/* banner */
+.banner, .banner img{
+  width: 100%;
+}
+
+/* 导航 */
+nav{
+  margin: 0 10px;
+}
+.nav-item{
+  float: left;
+  overflow: hidden;
+  text-align: center; line-height: 105px;
+  width: 25%; height: 70px;
+}
+
+/* 推荐 */
+.rec{
+  height: 19%;
+  margin: 0 10px;
+  background-color: #f1f1f1;
+  border: solid 1px #c6c6c6;
+}
+.rec-item{
+  position: relative;
+  float: left; overflow: hidden;
+}
+.rec-item img{
+  width: 100%;
+}
+.rec-item-p1{
+  width: 40%; height: 100%;
+  border-right: solid 1px #c6c6c6;
+}
+.rec-item-p2{
+  width: calc(60% - 1px); height: 42%;
+  border-bottom: solid 1px #c6c6c6;
+}
+.rec-item-p3{
+  width: calc(30% - 1px); height: calc(58% - 1px);
+  border-right: solid 1px #c6c6c6;
+}
+.rec-item-p4{
+  width: calc(30% - 1px); height: calc(58% - 1px);
+}
+.rec-timer{
+  position: absolute;
+  top: 38%; left: 41%;
+  line-height: 18px;
+}
+.rec-timer span{
+  text-align: center;
+  color: #fff; background-color: #000;
+  display: inline-block;
+  width: 22px; height: 18px;
+  box-shadow: 0 0 2px #666;
+}
+
+
+/* 分类 */
+.classify{
+  margin: 15px 10px 50px;
+}
+.pro-item{
+  float: left; position: relative;
+  width: calc(50% - 7px);
+  border: solid 1px #c6c6c6;
+  margin-bottom: 10px;
+}
+.pro-item img{
+  width: 100%;
+}
+.pro-item h4{
+  font-size: 13px;
+  padding: 0 0 0 8px;
+  width: 11em; line-height: 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.pro-item p{
+  padding: 0 0 4px 8px;
+  line-height: 20px;
+  color: #e61f19;
+}
+.classify .pro-item:nth-child(even) {
+  margin-right: 10px;
+}
+.ptl-icon, .ptr-icon{
+  overflow: hidden; line-height: 999em;
+  position: absolute;
+  top: 11%; 
+}
+.ptl-icon{
+  left: 10%;
+  width: 30%; height: 30%;
+}
+.ptr-icon{
+  right: 13%;
+  width: 17%; height: 7%;
+}
+
+/* tabs */
+.tabs{
+  position: fixed;
+  bottom: 0; left: 0;
+  width: 100%; height: 50px;
+  line-height: 50px;
+  border-top: solid 1px #697580;
+  background-color: #fff;
+  z-index: 99;
+}
+.tabs-item{
+  float: left;
+  border-left: solid 1px #697580;
+  width: calc(27% - 1px);
+  text-align: center; text-indent: 15px;
+  overflow: hidden;
+}
+.tabs .tabs-item:nth-child(1){
+  border: none;
+  width: 19%;
+  line-height: 999em;
+}
+
+/* 背景图 */
+.nav-item{
+  background-image: url(../img/navs.png);
+  background-repeat: no-repeat;
+  background-size: 36px auto;
+}
+.nav-item-i1{
+  background-position: center 7px;
+}
+.nav-item-i2{
+  background-position: center -69px;
+}
+.nav-item-i3{
+  background-position: center -141px;
+}
+.nav-item-i4{
+  background-position: center -218px;
+}
+.ptl-icon{
+  background-image: url(../img/hot.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.hot{
+  background-position: 0 0;
+}
+.ptr-icon{
+  background-image: url(../img/country.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.france{
+  background-position: 0 0;
+}
+.italy{
+  background-position: 0 -20px;
+}
+.logo{
+  background: url(../img/logo.png) no-repeat center;
+  background-size: 78% auto;
+}
+.top-nav{
+  background: url(../img/topnav.png) no-repeat center;
+  background-size: 52% auto;
+}
+.search-icon{
+  background: url(../img/searchicon.png) no-repeat center;
+  background-size: 60% auto;
+}
+.tabs-item{
+  background-image: url(../img/tabs.png);
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+  background-position: -5px -53px;
+}
+.tabs .tabs-item:nth-child(1){
+  background-size: 45% auto;
+  background-position: center 10px;
+}
+
+
+
