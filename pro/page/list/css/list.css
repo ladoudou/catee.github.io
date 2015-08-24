@@ -1,0 +1,160 @@
+body{
+  background-color: #f1f1f1;
+}
+a, a:visited, a:hover, a:active{
+  color: #333;
+  text-decoration: none;
+}
+.lt-fl{
+  float: left;
+}
+.lt-fr{
+  float: right;
+}
+
+.navbar{
+  border: none;
+}
+.logo{
+  height: 42px;
+  padding: 6px 0 0; 
+  text-align: center; text-indent: 6px;
+}
+.logo img{
+  height: 30px;
+}
+.nav{
+  height: 42px;
+  padding: 10px 0 0;
+  text-align: left;
+}
+.nav img{
+  height: 20px;
+}
+.navbar-default{
+  background-color: rgba(186, 225, 236, .38);
+  min-height: 42px;
+}
+.input-group-addon.nav-search{
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  width: 26px; height: 26px;
+}
+.form-control.nav-search{
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  height: 26px; line-height: 26px;
+}
+.form-control:focus.nav-search{
+  box-shadow: none;
+}
+.input-group.nav-search{
+  width: 100%;
+  margin-top: 8px;
+  border-spacing: 0;
+}
+
+
+.lt-blue{
+  color: #076baf!important;
+}
+
+.lt-navigator{
+  padding-top: 42px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.lt-navigator a{
+  float: left;
+  width: 20%;
+  text-align: center; line-height: 50px;
+}
+.lt-classify{
+  border-top: solid 1px #cbcbcb;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.lt-classify-item{
+  border-bottom: solid 1px #cbcbcb;
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.lt-classify-item a{
+  display: block;
+  border-right: solid 1px #cbcbcb;
+}
+.lt-classify .lt-classify-item:nth-child(5) a{
+  border-right: none;
+}
+.lt-classify .lt-classify-item:nth-child(10) a{
+  border-right: none;
+}
+.lt-classify-item img{
+  width: 50px;
+}
+.lt-classify-item p{
+  margin: 0;
+}
+
+.lt-list-max{
+  max-width: 414px;
+  margin: 0 auto;
+}
+.lt-list .lt-items:nth-child(even){
+  padding: 0 15px 0 5px;
+}
+.lt-list .lt-items:nth-child(odd){
+  padding: 0 5px 0 15px;
+}
+.lt-items a{
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+.lt-items h6{
+  margin: 0; padding: 4px 8px;
+  background-color: #2697cd;
+  color: #fff; font-size: 12px;
+
+}
+.lt-price{
+  font-size: 14px; color: #e61f19;
+  margin: 5px 0 0; line-height: 20px;
+  padding: 0 0 0 5px;
+}
+.lt-tips{
+  color: #9e9e9f;
+  font-size: 11px; padding: 0 0 0 5px;
+  line-height: 24px;
+}
+.lt-icon{
+  position: absolute;
+  top: 6%; left: 72%;
+  width: 18%; 
+}
+.lt-icon img, .lt-like img{
+  width: 100%;
+}
+.lt-like{
+  position: absolute;
+  bottom: 6%; right: 12%;
+  width: 15%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

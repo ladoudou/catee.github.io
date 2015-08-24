@@ -1,0 +1,235 @@
+a, a:visited, a:hover, a:active{
+  color: #333;
+  text-decoration: none;
+}
+h4{
+  font-size: 16px;
+}
+.ht-nomargin{
+  margin: 0;
+}
+.ht-nopadding{
+  padding: 0;
+}
+.ht-red{
+  color: #e61f19;
+}
+.ht-fl{
+  float: left;
+}
+.ht-fr-oh{
+  overflow: hidden;
+}
+
+.navbar{
+  border: none;
+}
+.logo{
+  height: 42px;
+  padding: 6px 0 0; 
+  text-align: center; text-indent: 6px;
+}
+.logo img{
+  height: 30px;
+}
+.nav{
+  height: 42px;
+  padding: 10px 0 0;
+  text-align: left;
+}
+.nav img{
+  height: 20px;
+}
+.navbar-default{
+  background-color: rgba(186, 225, 236, .38);
+  min-height: 42px;
+}
+.input-group-addon.nav-search{
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  width: 26px; height: 26px;
+}
+.form-control.nav-search{
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  height: 26px; line-height: 26px;
+}
+.form-control:focus.nav-search{
+  box-shadow: none;
+}
+.input-group.nav-search{
+  width: 100%;
+  margin-top: 8px;
+  border-spacing: 0;
+}
+
+.ht-banner{
+  display: block;
+  margin: 0 -15px;
+}
+.ht-banner img{
+  width: 100%;
+}
+
+.ht-navigator{
+  margin: 0;
+}
+.ht-navigator a{
+  padding: 0;
+}
+.ht-navigator a strong{
+  color: #135f8b;
+  line-height: 50px;
+}
+.ht-nav-icon{
+  display: inline-block;
+  width: 50px; height: 50px;
+}
+
+
+.ht-rec-timer{
+  position: absolute;
+  top: 35%; left: 43%;
+}
+.ht-rec-timer span{
+  text-align: center;
+  color: #fff; background-color: #000;
+  display: inline-block;
+  width: 22px; height: 18px;
+  box-shadow: 0 0 2px #666;
+}
+.ht-rec-tips{
+  position: absolute;
+  top: 60%; left: 36%;
+  font-size: 8px;
+  width: 63%;
+  padding: 8px;
+  color: #fff;
+}
+.ht-rec-tips p{
+  margin: 0;
+}
+
+.ht-items .thumbnail{
+  border-radius: 0;
+  position: relative;
+}
+.ht-products .ht-items:nth-child(even){
+  padding: 0 15px 0 7px; 
+}
+.ht-products .ht-items:nth-child(odd){
+  padding: 0 8px 0 15px; 
+}
+.ht-items h6{
+  color: #4d4d4d:;
+  font-weight: normal;
+  width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 7px;
+}
+.ht-items img{
+  width: 100%;
+}
+.ptl-icon, .ptr-icon{
+  overflow: hidden; line-height: 999em;
+  position: absolute;
+  top: 11%; 
+}
+.ptl-icon{
+  left: 10%;
+  width: 30%; height: 30%;
+}
+.ptr-icon{
+  right: 13%;
+  width: 17%; height: 8%;
+}
+
+.row.ht-recmmond{
+  border: solid 1px #cbcbcb;
+  margin: -3px;
+  background-color: #f1f1f1;
+  max-width: 414px;
+  margin: 0 auto;
+}
+.ht-recimg-1{
+  width: 45%;
+}
+.ht-recblock-1{
+  border-right: solid 1px #cbcbcb;
+}
+.ht-recblock-1 h4{
+  padding-left: 40px;
+}
+.ht-recblock-2{
+  border-bottom: solid 1px #cbcbcb;
+}
+.ht-recblock-2 h4{
+  padding-left: 40px;
+}
+.ht-recblock-2 p{
+  font-size: 10px;
+  padding-left: 15px;
+  margin: -3px 0 0;
+}
+.ht-recimg-2, .ht-recimg-3, .ht-recimg-4{
+  width: 100%;
+}
+.ht-recblock-2 .ht-fl{
+  width: 60%;
+}
+.ht-recblock-3{
+  border-right: solid 1px #cbcbcb;
+}
+.ht-recblock-3 .ht-fl,
+.ht-recblock-4 .ht-fl{
+  width: 43%;
+}
+.ht-recblock-3 h4,
+.ht-recblock-4 h4{
+  text-align: center;
+  padding-top: 30px;
+}
+.ht-recblock-3 p,
+.ht-recblock-4 p{
+  padding-top: 2px;
+  font-size: 10px;
+  text-align: center;
+}
+
+
+
+.ht-rec-tips{
+  background: url(../img/tips.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.ht-nav-icon{
+  background-image: url(../img/navs.png);
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+}
+.htni-1{
+  background-position: center 10px ;
+}
+.htni-2{
+  background-position: center -86px;
+}
+.htni-3{
+  background-position: center -177px;
+}
+.htni-4{
+  background-position: center -273px;
+}
+
+
+
+
+
+
+
+
+
+
