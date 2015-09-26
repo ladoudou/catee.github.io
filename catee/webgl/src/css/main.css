@@ -1,0 +1,14 @@
+html, body{
+  height: 100%;
+}
+#p{
+  color: #ddd;
+  text-align: center;
+  background-color: gray;
+}
+#canvasWrap{
+  width: 100%; height: calc(100% - 20px);
+}
+#canvas{
+  cursor: default;
+}
