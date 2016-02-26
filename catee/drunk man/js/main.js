@@ -124,30 +124,30 @@
         x = currentCoordinate.split(':')[0] >> 0,
         y = currentCoordinate.split(':')[1] >> 0;
       var tmp = Math.random();
-      if (tmp > 0.4) {
-        x = x + 1;
-      } else {
-        x = x - 1;
-      }
-      var tmp = Math.random();
-      if (tmp > 0.6) {
-        y = y + 1;
-      } else {
-        y = y - 1;
-      }
-      // if (tmp < 0.25) {
+      // if (tmp > 0.5) {
       //   x = x + 1;
-      //   y = y;
-      // } else if (tmp < 0.5) {
+      // } else {
       //   x = x - 1;
-      //   y = y;
-      // } else if (tmp < 0.75) {
-      //   x = x;
+      // }
+      // var tmp = Math.random();
+      // if (tmp > 0.5) {
       //   y = y + 1;
       // } else {
-      //   x = x;
       //   y = y - 1;
       // }
+      if (tmp < 0.25) {
+        x = x + 1;
+        y = y;
+      } else if (tmp < 0.5) {
+        x = x - 1;
+        y = y;
+      } else if (tmp < 0.75) {
+        x = x;
+        y = y + 1;
+      } else {
+        x = x;
+        y = y - 1;
+      }
       x = x < 0 ? 0 : x;
       x = x > 299 ? 299 : x;
       y = y < 0 ? 0 : y;
