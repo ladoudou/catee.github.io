@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catee</title>
+  <link rel="shortcut icon" href="./img/title.png" />
+  <link rel="stylesheet" href="../css/init.css">
+  <style>
+  html, body{
+    overflow: hidden;
+    width: 100%; height: 100%;
+    line-height: 1;
+  }
+  #svgBox{
+    width: calc(100% - 20px); height: calc(100% - 20px);
+    display: flex; align-items: center; justify-content: center;
+    border: solid 1px #ccc;
+    margin: 9px;
+  }
+  #mySvg{
+    width: 100%; height: 100%;
+  }
+  </style>
+</head>
+<body>
+  <div id="svgBox">
+    <embed id="mySvg" src="github_cat.svg" />
+  </div>
+</body>
+</html>
