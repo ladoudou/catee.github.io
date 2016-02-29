@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face { 
   font-family: 'tt'; 
-  src: url('../font/tt.woff') format('woff'); /* chrome、firefox */ 
+  src: url('../../font/tt.woff') format('woff'); /* chrome、firefox */ 
 }
 
 /* 初始化 */

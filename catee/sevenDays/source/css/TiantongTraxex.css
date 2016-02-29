@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face { 
   font-family: 'tt'; 
-  src: url('../font/tt.woff') format('woff'); /* chrome、firefox */ 
+  src: url('../../font/tt.woff') format('woff'); /* chrome、firefox */ 
 } 
 
 /* 初始化 */
@@ -142,7 +142,7 @@ body{
 .candy-GoB{
   width: 20px;
   height: 18px;
-  background: url(../img/heart.png) no-repeat 0 0;
+  background: url(../../img/heart.png) no-repeat 0 0;
   background-size: 40px 18px;
   position: absolute;
   right: 21px;
